@@ -1,0 +1,7 @@
+<link href="https://fonts.googleapis.com/css?family=Hammersmith+One|Noto+Sans&display=swap" rel="stylesheet">
+
+/*Header Font*/
+font-family: 'Hammersmith One', sans-serif;  
+
+/*Gen Font*/
+font-family: 'Noto Sans', sans-serif;
