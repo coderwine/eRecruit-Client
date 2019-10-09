@@ -1,3 +1,10 @@
-table {
-    width: 100%;
-  }
+
+  
+.card-like {
+    padding: 2em;
+    background-color: rgb(221, 32, 32);
+    border-radius: 15px;
+    width: 60vw;
+    height: 25vh;
+    margin: 25vh auto;
+}
