@@ -1,9 +1,4 @@
-body {
-    background: linear-gradient(145deg, 
-    #066B87 , 
-    #0990B5 52%);
-    margin: 0, auto;
-  }
+
   
   hr {
     background-color: whitesmoke;
@@ -12,6 +7,7 @@ body {
     color: white;
     letter-spacing: 1em;
     height: 50px;
+    font-size: 36px;
     width: auto;
     text-align: center;
     font-family: 'Comfortaa', cursive;

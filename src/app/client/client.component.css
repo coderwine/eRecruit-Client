@@ -1,10 +1,86 @@
-
-  
-.card-like {
+/* .card-like {
     padding: 2em;
     background-color: rgb(221, 32, 32);
     border-radius: 15px;
     width: 60vw;
     height: 25vh;
     margin: 25vh auto;
+} */
+
+.proPic {
+    max-width: 20%;
+    max-height: 20%;
+    /* margin-left: 25px;
+    margin-top: 25px; */
+}
+
+.link {
+    max-width: 10%;
+    max-height: 10%;
+    position: absolute;
+    left: 86%;
+    top: 11%;
+    z-index: 1;
+}
+
+.git {
+    max-width: 10%;
+    max-height: 10%;
+    position: absolute;
+    left: 93%;
+    top: 11%;
+    z-index: 1;
+}
+
+.statsList {
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+}
+
+.infoList {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+h2 {
+    position: absolute;
+    left: 30%;
+    top: 18%;
+    color: white;
+    font-size: 52px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: .05em;
+}
+
+#control {
+    position: absolute;
+    width: 5.25%;
+    height: 10%;
+    background-color: white;
+    left: 86%;
+    top: 11%;
+    border-radius: 20%;
+}
+
+#control2 {
+    position: absolute;
+    width: 4.75%;
+    height: 9.25%;
+    background-color: white;
+    left: 93.25%;
+    top: 11.25%;
+    border-radius: 80%;
+}
+
+p {
+    font-family: 'Exo 2', sans-serif;
+}
+
+li {
+    font-family: 'Exo 2', sans-serif;
 }
