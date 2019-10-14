@@ -1,0 +1,10 @@
+<div>
+    <h1>Recruiter</h1>
+    <ul>
+        <li *ngFor="let user of users">
+            <a routerLink="/user/{{users.id}}">
+            {{ users.name }}
+            </a>
+        </li>
+    </ul>
+</div>
