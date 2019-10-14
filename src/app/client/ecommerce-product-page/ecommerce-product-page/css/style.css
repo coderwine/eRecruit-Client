@@ -1,0 +1,18 @@
+/* YOUR CUSTOM STYLES */
+.footer-links {
+    text-transform: uppercase;
+}
+
+a.list-group-item:hover {
+    background-color: #59B509 !important;
+}
+
+.proPic {
+    width: 30%;
+    height: 30%;
+}
+
+.col-lg-3, .col-md-6, .ml-auto{
+    left: -25% !important;
+}
+
