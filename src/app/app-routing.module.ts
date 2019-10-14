@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { RecruiterComponent } from './recruiter/recruiter.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
-import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
