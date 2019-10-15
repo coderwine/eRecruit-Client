@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import {Jobs} from './jobs';
+import {Jobs} from '../models/jobs';
 
 Injectable({
     providedIn: 'root'
