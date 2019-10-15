@@ -1,34 +1,44 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Observable, of } from 'rxjs';
+// import { catcherror, map, tap } from 'rxjs/operators';
+
+import { Users } from './users';
 
 @Injectable({
     providedIn: 'root'
 })
+
 export class RecruiterService {
     
     Server_URL: string = 'https://erecruit-server.herokuapp.com/';
 
+    httpOptions  = {
+        headers: new HttpHeaders({ 'Content Type': 'Application/json'})
+    };
+
     constructor(private httpClient: HttpClient) {}
 
-    //!  Login/Signup
+    
 
-    getUsersSignup() {
-        return this.httpClient.get(`${this.Server_URL}/users/signup`)
-    }
+    // postUsersSignup() {
+    //     return this.httpClient.post(`${this.Server_URL}/users/signup`)
+    // }
 
-    getUsersLogin() {
-        return this.httpClient.get(`${this.Server_URL}/users/login`)
-    }
+    // postUsersLogin() {
+    //     return this.httpClient.post(`${this.Server_URL}/users/login`)
+    // }
 
-    //! GET ALL / POST NEW
-    getLogs() {
-        return this.httpClient.get(`${this.Server_URL}/logs`)
-    }
+  
+    // getLogs() {
+    //     return this.httpClient.get(`${this.Server_URL}/logs`)
+    // }
 
-    //! by ID
-    getLogID(logId) {
-        return this.httpClient.get(`${this.Server_URL}/logs/${logId}`)
-    }
+
+    // getLogID(logId) {
+    //     return this.httpClient.get(`${this.Server_URL}/logs/${logId}`)
+    // }
 
     
 }

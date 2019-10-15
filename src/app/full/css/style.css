@@ -5,6 +5,7 @@
 
 a.list-group-item:hover {
     background-color: #59B509 !important;
+    color: white;
 }
 
 .proPic {
@@ -13,6 +14,6 @@ a.list-group-item:hover {
 }
 
 .col-lg-3, .col-md-6, .ml-auto{
-    left: -25% !important;
+    /* left: -25% !important; */
 }
 
