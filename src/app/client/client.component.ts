@@ -1,6 +1,8 @@
 import {Component, OnInit, Input} from '@angular/core';
-import { ClientService } from '../client.services';
+import { Users } from '../users';
 
+
+//! Need to break down what is being pulled and what is needed.
 export interface ClientInformation {
   fullName: string;
   email: string;

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RecruiterComponent } from './recruiter/recruiter.component';
+import { FullComponent } from './full/full.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
 
   // {path: '/users/client', component: ClientComponent },
-  {path: 'users', component: RecruiterComponent },
+  // {path: 'users', component: FullComponent },
   // {path: '/users/admin', component: AdminComponent },
 
   {path: '**', component: PageNotFoundComponent}
