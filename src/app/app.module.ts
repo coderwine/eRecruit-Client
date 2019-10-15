@@ -11,6 +11,7 @@ import { ClientComponent } from './client/client.component';
 import { RecruiterComponent } from './recruiter/recruiter.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FullComponent } from './full/full.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ClientComponent,
     RecruiterComponent,
     AdminComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FullComponent
   ],
   imports: [
     BrowserModule,
