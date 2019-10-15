@@ -1,3 +1,10 @@
+<div class="logo">
+        <div class="logoTitle">eRecruit
+            <p>Making Recruiting E-asy</p>
+        </div>
+    </div>
+
+<div class="regPage">
 <h2>Register</h2>
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
@@ -28,6 +35,7 @@
             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
             Register
         </button>
-        <a routerLink="/login" class="btn btn-link">Cancel</a>
+        <a routerLink="/login" class="btn btn-link loginBtn">Cancel</a>
     </div>
 </form>
+</div>
