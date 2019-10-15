@@ -11,6 +11,13 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { RecSearchComponent } from './rec-search/rec-search.component';
+import { ClientComponent } from './client/client.component';
+import { AdminComponent } from './admin/admin.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FullComponent } from './full/full.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +25,12 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent
+    RecSearchComponent,
+    ClientComponent,
+    AdminComponent,
+    PageNotFoundComponent,
+    FullComponent
+
   ],
   imports: [
     BrowserModule,
