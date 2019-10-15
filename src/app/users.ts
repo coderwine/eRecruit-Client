@@ -1,4 +1,4 @@
-export class Recruiter {
+export class Users {
 
     id: number;
     name: string;
