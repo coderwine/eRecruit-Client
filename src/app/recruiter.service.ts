@@ -12,7 +12,7 @@ import { Users } from './users';
 
 export class RecruiterService {
     
-    Server_URL: string = 'https://erecruit-server.herokuapp.com/';
+    Server_URL: string = 'https://erecruit-server.herokuapp.com';
 
     httpOptions  = {
         headers: new HttpHeaders({ 'Content Type': 'Application/json'})
@@ -22,22 +22,21 @@ export class RecruiterService {
 
     
 
-    // postUsersSignup() {
-    //     return this.httpClient.post(`${this.Server_URL}/users/signup`)
-    // }
+    postUsersSignup() {
+        return this.httpClient.post(`${this.Server_URL}users/signup`, null)
+    }
 
     // postUsersLogin() {
-    //     return this.httpClient.post(`${this.Server_URL}/users/login`)
+    //     return this.httpClient.post(`${this.Server_URL}users/login`)
     // }
 
-  
     // getLogs() {
-    //     return this.httpClient.get(`${this.Server_URL}/logs`)
+    //     return this.httpClient.get(`${this.Server_URL}logs`)
     // }
 
 
     // getLogID(logId) {
-    //     return this.httpClient.get(`${this.Server_URL}/logs/${logId}`)
+    //     return this.httpClient.get(`${this.Server_URL}logs/${logId}`)
     // }
 
     
