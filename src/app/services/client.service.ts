@@ -8,16 +8,17 @@ import {Client} from '../models/client';
 export class ClientService {
 
   constructor(private http: HttpClient) { }
+  private serverURL = 'erecruit-server.herokuapp.com/user'
 
   getAll() {
-    return this.http.get<Client[]>('/client')
+    return this.http.get<Client[]>(this.serverURL)
   }
 
   register(client: Client) {
-    return this.http.post('/client/register', client)
+    return this.http.post(`${this.serverURL}/register`, client)
   }
 
   delete(fullName: string) {
-    return this.http.delete(`/client/${fullName}`)
+    return this.http.delete(`${this.serverURL}/${fullName}`)
   }
 }
