@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Users } from '../users';
+import { Client } from '../models/client';
 
 @Component({
   selector: 'app-full',
@@ -8,9 +8,12 @@ import { Users } from '../users';
 })
 export class FullComponent implements OnInit {
 
+  name = [Client.name]
   constructor() { }
 
   ngOnInit() {
+    
+    
   }
 
 }

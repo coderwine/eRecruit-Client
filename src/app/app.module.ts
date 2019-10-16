@@ -16,6 +16,7 @@ import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { FullComponent } from './full/full.component';
     AlertComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
     RecSearchComponent,
     ClientComponent,
     AdminComponent,
@@ -36,7 +37,8 @@ import { FullComponent } from './full/full.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
