@@ -8,7 +8,7 @@ import {Client} from '../models/client';
 export class ClientService {
 
   constructor(private http: HttpClient) { }
-  private serverURL = 'erecruit-server.herokuapp.com/user'
+  private serverURL = 'erecruit-server.herokuapp.com/users'
 
   getAll() {
     return this.http.get<Client[]>(this.serverURL)

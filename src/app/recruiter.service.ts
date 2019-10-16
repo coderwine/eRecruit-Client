@@ -12,7 +12,7 @@ import { Users } from './users';
 
 export class RecruiterService {
     
-    Server_URL: string = 'https://erecruit-server.herokuapp.com/';
+    Server_URL: string = 'https://erecruit-server.herokuapp.com';
 
     httpOptions  = {
         headers: new HttpHeaders({ 'Content Type': 'Application/json'})
