@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'; 
 import { AuthenticationService } from './services/authentication.service'; 
-import { Client } from './models/user'; 
+import { User } from './models/user';
+
 
 @Component({
 
@@ -12,7 +13,7 @@ import { Client } from './models/user';
 
 export class AppComponent {
   title = 'e-recruit';
-  currentClient: Client; 
+  currentClient: User; 
 
   constructor(
     private router: Router, 
