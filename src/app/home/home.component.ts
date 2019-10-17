@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {first} from 'rxjs/operators';
-import {Client} from '../models/client';
+import {User} from '../models/user';
 import {ClientService} from '../services/client.service';
 import {AuthenticationService} from '../services/authentication.service';
 
@@ -10,7 +10,7 @@ import {AuthenticationService} from '../services/authentication.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  currentClient: Client; 
+  currentClient: User; 
   clients = []
 
   constructor(
