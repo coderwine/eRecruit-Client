@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: 'signup', component: RegisterComponent}, 
   {path: 'splashPage', component: FullComponent},
   {path: 'logout', component: LoginComponent},
-  // {path: '**', redirectTo: ''}
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
