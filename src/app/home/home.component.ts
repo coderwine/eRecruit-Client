@@ -3,6 +3,7 @@ import {first} from 'rxjs/operators';
 import {User} from '../models/user';
 import {ClientService} from '../services/client.service';
 import {AuthenticationService} from '../services/authentication.service';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-home',
@@ -15,25 +16,17 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private authenticationService: AuthenticationService,
-    private clientService: ClientService
+    private clientService: ClientService,
+    private router: Router
   ) {
       this.currentClient = this.authenticationService.currentUserValue
    }
 
   ngOnInit() {
-    this.loadAllClients();
   }
 
-  deleteUser(fullName: string) {
-    this.clientService.delete(fullName)
-    .pipe(first())
-    .subscribe(() => this.loadAllClients())
+  logout() {
+    this.authenticationService.logout(); 
+    this.router.navigate(['/login']); 
   }
-
-  private loadAllClients() {
-    this.clientService.getAll()
-    .pipe(first())
-    .subscribe(clients => this.clients = clients);
-  }
-
 }
