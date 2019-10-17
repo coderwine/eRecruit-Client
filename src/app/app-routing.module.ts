@@ -16,16 +16,12 @@ const routes: Routes = [
   {path: 'signup', component: RegisterComponent}, 
   {path: 'splashPage', component: FullComponent},
   {path: 'logout', component: LoginComponent},
-<<<<<<< HEAD
-  // {path: '**', redirectTo: PageNotFoundComponent}
-=======
   {path: '**', redirectTo: ''}
->>>>>>> 9480ed3cbbbf79aec85e902d68528e7f92d1eef4
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, 
-    { enableTracing: true } //enableTracing is for debugging purposes only.
+    { enableTracing: false } //enableTracing is for debugging purposes only.
     )],
   exports: [RouterModule]
 })

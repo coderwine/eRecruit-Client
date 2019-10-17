@@ -5,7 +5,7 @@ import { first } from 'rxjs/operators';
 import { AlertService } from '../services/alert.service'; 
 import { ClientService } from '../services/client.service'; 
 import { AuthenticationService } from '../services/authentication.service'; 
-import {HttpClient} from '@angular/common/http';
+// import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -21,9 +21,9 @@ export class RegisterComponent implements OnInit {
     private formBuilder: FormBuilder, 
     private router: Router, 
     private authenticationService: AuthenticationService, 
-    private clientService: ClientService, 
+    // private clientService: ClientService, 
     private alertService: AlertService,
-    private http: HttpClient
+    // private http: HttpClient
   ) { 
     if (this.authenticationService.currentUserValue) {
       this.router.navigate(['/']); 
@@ -44,12 +44,12 @@ export class RegisterComponent implements OnInit {
     this.submitted = true; 
     this.alertService.clear(); 
     if (this.registerForm.invalid) {
-      return; 
+      return;
     }
 
     this.loading = true; 
     this.authenticationService.signup(this.registerForm.value)
-    //.pipe(first())
+    // .pipe(first())
     .subscribe(
       data => {
         this.alertService.success('Registration successful', true); 
