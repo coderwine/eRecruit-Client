@@ -12,7 +12,7 @@ import { User } from '../models/user';
 export class AuthenticationService {
   private currentUserSubject: BehaviorSubject<User>;
   public currentClient: Observable<User>;
-  private serverURL = 'erecruit-server.herokuapp.com'
+  private serverURL = 'https://erecruit-server.herokuapp.com'
 
   HttpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -27,7 +27,7 @@ export class AuthenticationService {
     return this.currentUserSubject.value;
   }
 
-  login(email, password): Observable<User> {
+  login(email: string, password: string): Observable<User> {
     return this.http.post<User>(`${this.serverURL}/users/login`, {email, password})
     .pipe(map(client => {
       localStorage.setItem('currentClient', JSON.stringify(client));
@@ -37,7 +37,7 @@ export class AuthenticationService {
   }
 
   signup(user: User): Observable<User> {
-    return this.http.post<User>(`${this.serverURL}/signup`, user)
+    return this.http.post<User>(`${this.serverURL}/users/signup`, user)
     .pipe(map(client => {
       localStorage.setItem('currentClient', JSON.stringify(client));
       this.currentUserSubject.next(client);

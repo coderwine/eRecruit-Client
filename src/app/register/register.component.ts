@@ -49,14 +49,14 @@ export class RegisterComponent implements OnInit {
 
     this.loading = true; 
     this.authenticationService.signup(this.registerForm.value)
-    .pipe(first())
+    //.pipe(first())
     .subscribe(
       data => {
         this.alertService.success('Registration successful', true); 
-        console.log('Client registered!')
-        // this.router.navigate(['/signup']); 
+        console.log('Client registered!');
+        this.router.navigate(['/login']); 
       }, 
-      error => {
+      (error) => {
         this.alertService.error(error); 
         this.loading = false; 
       }); 
