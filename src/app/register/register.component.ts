@@ -5,7 +5,7 @@ import { first } from 'rxjs/operators';
 import { AlertService } from '../services/alert.service'; 
 import { ClientService } from '../services/client.service'; 
 import { AuthenticationService } from '../services/authentication.service'; 
-import {HttpClient} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -54,7 +54,7 @@ export class RegisterComponent implements OnInit {
       data => {
         this.alertService.success('Registration successful', true); 
         console.log('Client registered!');
-        this.router.navigate(['/login']); 
+        this.router.navigate(['/']); 
       }, 
       (error) => {
         this.alertService.error(error); 
