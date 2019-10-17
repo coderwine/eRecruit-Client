@@ -10,7 +10,6 @@ import { AlertComponent } from './alert/alert.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
 import { RecSearchComponent } from './rec-search/rec-search.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';

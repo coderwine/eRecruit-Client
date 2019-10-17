@@ -1,0 +1,46 @@
+.loginBtn {
+    color: black !important;
+}
+
+.regPage {
+    height: 100vh;    
+    padding: 25% 0;
+}
+
+
+.logo {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    height: 175px;
+    width: 175px;
+    border-radius: 300px;
+    border: 2px solid black;
+    background-color: #0990b5;
+    margin: 2em;
+}
+
+.logo:hover {
+    background-color: #066b87;
+    border: 2px solid #0990b5;
+}
+
+.logoTitle {
+    display: block;
+    text-align: center;
+    margin: 25% auto;
+    position: relative;
+    color: white;
+    font-size: 2.3em;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.logoTitle p {
+    font-size: 10pt;
+}
+
+@media only screen and (max-width: 720px) {
+    .logo {
+        visibility: hidden;
+    }
+}
