@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router';
-// import { HomeComponent } from './home/home.component'; 
+import { HomeComponent } from './home/home.component'; 
 import { LoginComponent } from './login/login.component'; 
 import { RegisterComponent } from './register/register.component'; 
 import { AuthGuard } from './guards/auth.guard'; 
@@ -11,8 +11,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const routes: Routes = [
-  {path: '', component: LoginComponent, canActivate: [AuthGuard] }, 
-  // {path: 'login', component: LoginComponent}, 
+  {path: '', component: HomeComponent, canActivate: [AuthGuard] }, 
+  {path: 'login', component: LoginComponent}, 
   {path: 'signup', component: RegisterComponent}, 
   {path: 'splashPage', component: FullComponent},
   {path: 'logout', component: LoginComponent},
