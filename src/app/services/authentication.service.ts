@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators'; 
 import { User } from '../models/user';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -47,5 +48,6 @@ export class AuthenticationService {
   logout() {
     localStorage.removeItem('currentClient');
     this.currentUserSubject.next(null);
+    console.log("CLEAR! *shocks patient*");
   }
 }
