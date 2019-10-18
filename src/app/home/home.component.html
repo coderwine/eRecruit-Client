@@ -1,9 +1,12 @@
 <h1>Welcome to E-Recruit</h1>
 
 <h3>All registered clients: </h3>
+<a class="nav-item nav-link" (click)="logout()">Logout</a>
 <ul>
     <li *ngFor="let client of clients">
         {{client.fullName}}
         - <a (click)="deleteUser(user.fullName)" class="text-danger">Delete</a>
     </li>
 </ul>
+
+<button routerLink="/full">TO LOGIN!</button>
