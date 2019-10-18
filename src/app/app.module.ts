@@ -18,6 +18,7 @@ import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

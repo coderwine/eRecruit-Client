@@ -22,11 +22,7 @@ export class RegisterComponent implements OnInit {
     private alertService: AlertService
   ) { 
     if (this.authenticationService.currentUserValue) {
-<<<<<<< HEAD
       this.router.navigate(['/signup']); 
-=======
-      this.router.navigate(['/splashPage']); 
->>>>>>> master
     }
   }
 
@@ -55,12 +51,7 @@ export class RegisterComponent implements OnInit {
       data => {
         this.alertService.success('Registration successful', true); 
         console.log('Client registered!');
-<<<<<<< HEAD
-        this.router.navigate(['/splashPage']); 
-=======
-        this.router.navigate(['/spashPage']); 
-
->>>>>>> master
+        this.router.navigate(['/clientPage']); 
       }, 
       (error) => {
         this.alertService.error(error); 
