@@ -30,7 +30,7 @@ export class AuthenticationService {
   }
 
   login(email: string, password: string): Observable<User> {
-    return this.http.post<User>(`${this.serverURL}/users/authenticate`, {email, password})
+    return this.http.post<User>(`${this.serverURL}/users/login`, {email, password})
     .pipe(map(client => {
       localStorage.setItem('currentClient', JSON.stringify(client));
       this.currentUserSubject.next(client);

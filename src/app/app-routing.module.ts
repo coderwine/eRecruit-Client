@@ -15,8 +15,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent}, 
   {path: 'signup', component: RegisterComponent}, 
   {path: 'splashPage', component: FullComponent},
+  {path: 'clientPage', component: ClientComponent},
   {path: 'logout', component: LoginComponent},
-  {path: '**', redirectTo: ''}
+  // {path: '**', redirectTo: PageNotFoundComponent}
 ];
 
 @NgModule({
