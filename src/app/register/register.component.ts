@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Router, RouterLink } from '@angular/router'; 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { first } from 'rxjs/operators'; 
 import { AlertService } from '../services/alert.service'; 
@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
     private alertService: AlertService
   ) { 
     if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/splashPage']); 
+      this.router.navigate(['/signup']); 
     }
   }
 
@@ -53,14 +53,15 @@ export class RegisterComponent implements OnInit {
         this.alertService.success('Registration successful', true); 
         console.log(User);
         console.log('Client registered!');
-
-        this.router.navigate(['/spashPage']); 
+        this.router.navigate(['/clientPage']); 
       }, 
       (error) => {
         this.alertService.error(error); 
         this.loading = false; 
       }); 
+      
   }
+
 
 
 }
