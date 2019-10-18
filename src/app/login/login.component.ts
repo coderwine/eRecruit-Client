@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required], 
+      email: ['', [Validators.required, Validators.email]], 
       password: ['', Validators.required]
     }); 
 
@@ -51,8 +51,7 @@ export class LoginComponent implements OnInit {
     .pipe(first())
     .subscribe(
       data => {
-        this.router.navigate(['/']);
-        console.log('logged in') 
+        this.router.navigate([this.returnUrl]); 
       },
       error => {
         this.alertService.error(error); 
