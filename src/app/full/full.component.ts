@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'
-import { AuthenticationService } from '../services/authentication.service';
-
+import { Router } from '@angular/router';
+// import { AuthenticationService } from '../services/authentication.service'
 
 @Component({
   selector: 'app-full',
@@ -10,20 +9,17 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class FullComponent implements OnInit {
 
-  
-  
 
   constructor(
-    private router: Router,
-    private authenticatedService: AuthenticationService) { }
-    
-  ngOnInit() {
-  }
+    private router: Router
+  ) { }
 
-  logout() {
-    this.authenticatedService.logout();
-    this.router.navigate(['/login'])
-  }
+  ngOnInit() {
+  }     
+
+  // logout() {
+  //   this.authenticationService.logout();
+  //   this.router.navigate(['/login'])
+  // }
 
 }
-
