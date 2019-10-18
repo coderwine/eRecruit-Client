@@ -3,9 +3,7 @@ import { Router, RouterLink } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; 
 import { first } from 'rxjs/operators'; 
 import { AlertService } from '../services/alert.service'; 
-import { ClientService } from '../services/client.service'; 
 import { AuthenticationService } from '../services/authentication.service'; 
-import {HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-register',
@@ -21,12 +19,14 @@ export class RegisterComponent implements OnInit {
     private formBuilder: FormBuilder, 
     private router: Router, 
     private authenticationService: AuthenticationService, 
-    private clientService: ClientService, 
-    private alertService: AlertService,
-    private http: HttpClient
+    private alertService: AlertService
   ) { 
     if (this.authenticationService.currentUserValue) {
+<<<<<<< HEAD
       this.router.navigate(['/signup']); 
+=======
+      this.router.navigate(['/splashPage']); 
+>>>>>>> master
     }
   }
 
@@ -48,13 +48,19 @@ export class RegisterComponent implements OnInit {
     }
 
     this.loading = true; 
+    console.log(this.registerForm.value)
     this.authenticationService.signup(this.registerForm.value)
-    //.pipe(first())
+    .pipe(first())
     .subscribe(
       data => {
         this.alertService.success('Registration successful', true); 
         console.log('Client registered!');
+<<<<<<< HEAD
         this.router.navigate(['/splashPage']); 
+=======
+        this.router.navigate(['/spashPage']); 
+
+>>>>>>> master
       }, 
       (error) => {
         this.alertService.error(error); 
