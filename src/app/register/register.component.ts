@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators'; 
 import { AlertService } from '../services/alert.service'; 
 import { AuthenticationService } from '../services/authentication.service'; 
+import {User} from '../models/user'
 
 @Component({
   selector: 'app-register',
@@ -50,6 +51,7 @@ export class RegisterComponent implements OnInit {
     .subscribe(
       data => {
         this.alertService.success('Registration successful', true); 
+        console.log(User);
         console.log('Client registered!');
 
         this.router.navigate(['/spashPage']); 

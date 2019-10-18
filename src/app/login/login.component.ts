@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   loading = false; 
   submitted = false; 
   returnUrl: string; 
+  error = '';
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -41,7 +42,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true; 
-    this.alertService.clear(); 
     if (this.loginForm.invalid) {
       return; 
     }
