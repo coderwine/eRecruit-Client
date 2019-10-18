@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       password: ['', Validators.required]
     }); 
 
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/'; 
+    // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/'; 
   }
 
   get f() { return this.loginForm.controls; }
@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
     .pipe(first())
     .subscribe(
       data => {
-        this.router.navigate(['/']); 
+        this.router.navigate(['/splashPage']); 
       },
       error => {
         this.alertService.error(error); 
