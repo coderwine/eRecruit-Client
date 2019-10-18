@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material';
+import { Router } from '@angular/router';
+import {AuthenticationService} from '../services/authentication.service';
+
 
 
 //! Need to break down what is being pulled and what is needed.
@@ -40,8 +43,17 @@ export interface ClientInformation {
 
 export class ClientComponent implements OnInit {
 
+  constructor(
+    private router: Router,
+    private authenticationService: AuthenticationService
+  ) { }
  
   ngOnInit() {
   }
   
+  logout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/login']);
+  }
+
 }
