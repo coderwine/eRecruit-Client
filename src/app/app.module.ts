@@ -16,6 +16,9 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
 
 
 
@@ -30,7 +33,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     ClientComponent,
     AdminComponent,
     PageNotFoundComponent,
-    FullComponent
+    FullComponent,
+    LoginRecruiterComponent,
+    LoginAdminComponent,
+    RegisterRecruiterComponent
 
   ],
   imports: [

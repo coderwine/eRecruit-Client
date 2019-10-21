@@ -5,7 +5,7 @@
     </div>
 
 <div class="regPage">
-<h2>Register</h2>
+<!-- <h2>Register</h2> -->
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="fullName">Full Name</label>
@@ -37,6 +37,7 @@
             Register
         </button>
         <a routerLink="/login" class="btn btn-link loginBtn">Cancel</a>
+        <a routerLink="/recSignup" class="btn btn-link loginBtn">Register as a Recruiter</a>
     </div>
 </form>
 </div>
