@@ -40,7 +40,7 @@ export class RegisterComponent implements OnInit {
     this.submitted = true; 
     this.alertService.clear(); 
     if (this.registerForm.invalid) {
-      return; 
+      return;
     }
 
     this.loading = true; 

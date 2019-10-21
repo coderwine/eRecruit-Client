@@ -12,9 +12,8 @@ import { Users } from '../users';
 })
 export class FullComponent implements OnInit {
 
+  
 
-  
-  
 
   constructor(
     private router: Router,
