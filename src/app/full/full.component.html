@@ -123,13 +123,13 @@
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
 
                     <div class="widget-wrapper">
-                        <h4>Welcome back {{client.fullName}} </h4>
+                        <h4>Welcome back {{Users.name}} </h4>
                         <br>
                         <div class="list-group">
                             <a routerLink="profile.component.html" class="list-group-item">My Profile</a>
                             <!-- <button style="margin-left: 210px; margin-top: -40px; margin-right: 10px; z-index: 3">Edit</button> -->
-                            <a routerLink="client.component.html" class="list-group-item">Clients</a>
-                            <a routerLink="search.component.html" class="list-group-item">Search</a>
+                            <a routerLink="client.component.html" class="list-group-item">Search Clients</a>
+                            <a (click)="message()" class="list-group-item">Messages</a>
                             <a (click)="logout()" class="list-group-item">Logout</a>
                             
                         </div>
