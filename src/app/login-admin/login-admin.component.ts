@@ -48,10 +48,11 @@ export class LoginAdminComponent implements OnInit {
     }
 
     this.loading = true; 
-    this.authenticationService.login(this.f.email.value, this.f.password.value)
+    this.authenticationService.loginAdmin(this.f.email.value, this.f.password.value)
     .pipe(first())
     .subscribe(
       data => {
+        console.log('ADMIN-Man!')
         this.router.navigate(['/splashPage']); //! THIS NEEDS TO ROUTE TO RECRUITER SPLASH
       },
       error => {

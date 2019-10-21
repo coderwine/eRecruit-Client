@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
     private alertService: AlertService
   ) { 
     if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/signup']); 
+      this.router.navigate(['/signupClient']); 
     }
   }
 
@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
 
     this.loading = true; 
     console.log(this.registerForm.value)
-    this.authenticationService.signup(this.registerForm.value)
+    this.authenticationService.signupClient(this.registerForm.value)
     .pipe(first())
     .subscribe(
       data => {

@@ -50,7 +50,7 @@ export class RegisterRecruiterComponent implements OnInit {
     .subscribe(
       data => {
         this.alertService.success('Registration successful', true); 
-        console.log('Client registered!');
+        console.log('Recruiter Registered!');
         this.router.navigate(['/clientPage']); 
       }, 
       (error) => {

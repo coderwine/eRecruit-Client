@@ -47,11 +47,12 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true; 
-    this.authenticationService.login(this.f.email.value, this.f.password.value)
+    this.authenticationService.loginClient(this.f.email.value, this.f.password.value)
     .pipe(first())
     .subscribe(
       data => {
-        this.router.navigate(['/splashPage']); 
+        console.log('Client Logged In')
+        this.router.navigate(['/clientPage']); 
       },
       error => {
         this.alertService.error(error); 
