@@ -16,9 +16,10 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { MessageComponent } from './message/message.component';
+import { FullMessageComponent } from './fullmessage/fullmessage.component';
 import { NgChatModule } from 'ng-chat';
 import { FormsModule } from '@angular/forms';
+import { ClientmessageComponent } from './clientmessage/clientmessage.component';
 
 
 
@@ -34,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     AdminComponent,
     PageNotFoundComponent,
     FullComponent,
-    MessageComponent
+    FullMessageComponent,
+    ClientmessageComponent
 
   ],
   imports: [

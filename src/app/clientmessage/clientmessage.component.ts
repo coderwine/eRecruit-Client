@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { resetFakeAsyncZone } from '@angular/core/testing';
-
-
 
 @Component({
-  selector: 'app-message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css']
+  selector: 'app-clientmessage',
+  templateUrl: './clientmessage.component.html',
+  styleUrls: ['./clientmessage.component.css']
 })
-export class MessageComponent implements OnInit {
+export class ClientmessageComponent implements OnInit {
   messages = ['Begin Messaging... '];
 
   constructor() { }
@@ -16,8 +13,6 @@ export class MessageComponent implements OnInit {
   ngOnInit() {
   }
 
-   
-    
   addMessage(newMessage: string) {
     if (newMessage) {
       this.messages.push(newMessage);
@@ -25,10 +20,5 @@ export class MessageComponent implements OnInit {
       
     }
 
-    
   }
-  
-
-  
-
 }
