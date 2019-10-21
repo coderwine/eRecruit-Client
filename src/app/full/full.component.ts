@@ -20,11 +20,8 @@ export class FullComponent implements OnInit {
     li: "linkedin.com/bj",
     gh: "github.io/bj14",
     comments: " "
-
-
   }
-  
-  
+
 
   constructor(
     private router: Router,
