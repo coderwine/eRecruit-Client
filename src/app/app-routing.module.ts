@@ -10,6 +10,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
+import { MessageComponent } from './message/message.component';
+
 
 
 const routes: Routes = [
@@ -21,6 +23,8 @@ const routes: Routes = [
   {path: 'recSignup', component: RegisterRecruiterComponent}, 
   {path: 'splashPage', component: FullComponent},
   {path: 'clientPage', component: ClientComponent},
+  {path: 'messaging', component: MessageComponent},
+  {path: 'adminPortal', component: AdminComponent},
   {path: 'logout', component: LoginComponent},
   // {path: '**', redirectTo: PageNotFoundComponent}
 ];

@@ -18,8 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
-
-
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,7 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     LoginRecruiterComponent,
     LoginAdminComponent,
     RegisterRecruiterComponent
-
+    MessageComponent
   ],
   imports: [
     BrowserModule,
