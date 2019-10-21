@@ -16,6 +16,7 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { JobsComponent } from './jobs/jobs.component';
 
 
 
@@ -30,7 +31,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     ClientComponent,
     AdminComponent,
     PageNotFoundComponent,
-    FullComponent
+    FullComponent,
+    JobsComponent
 
   ],
   imports: [
