@@ -30,6 +30,7 @@
         main {
             padding-top: 3rem;
             padding-bottom: 2rem;
+            
            
         }
 
@@ -101,6 +102,7 @@
         
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark ">
+            <a routerLink="/splashPage" id="back">Back</a>
             <div class="container">
                 <a class="navbar-brand" href="#">eRecruit</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -136,12 +138,38 @@
 
     <label class="messagePerson">Guy I am talking to</label>
     <ul>
-        <li class="people"><a type="button" (click)="displayMessage()">Client 1</a></li>
-        <li class="people"><a type="button" >Client 2</a></li>
-        <li class="people"><a type="button" >Client 3</a></li>
-        <li class="people"><a type="button" >Recruiter 1</a></li>
-        <li class="people"><a type="button" >Recruiter 2</a></li>
-        <li class="people"><a type="button" >Recruiter 3</a></li>
+        <li class="people">
+            <div class="media wow fadeIn" data-wow-delay="0.2s">
+                    <a class="media-left"  (click)="displayMessage()">
+                        <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image" />
+                    </a>
+                    <label>John Doe</label>
+            </div>
+        </li>
+        <li class="people">
+            <div class="media wow fadeIn" data-wow-delay="0.2s">
+                    <a class="media-left"  (click)="displayMessage()">
+                        <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image" />
+                    </a>
+                    <label>John Doe</label>
+            </div>
+            </li>
+        <li class="people">
+            <div class="media wow fadeIn" data-wow-delay="0.2s">
+                    <a class="media-left"  (click)="displayMessage()">
+                        <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image" />
+                    </a>
+                    <label>John Doe</label>
+            </div>
+        </li>
+        <li class="people">
+            <div class="media wow fadeIn" data-wow-delay="0.2s">
+                    <a class="media-left"  (click)="displayMessage()">
+                        <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image" />
+                    </a>
+                    <label>John Doe</label>
+            </div>
+        </li>
     </ul>
 
 
