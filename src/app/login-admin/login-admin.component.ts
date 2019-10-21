@@ -6,11 +6,12 @@ import { AlertService } from '../services/alert.service';
 import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-login-admin',
+  templateUrl: './login-admin.component.html',
+  styleUrls: ['./login-admin.component.css']
 })
-export class LoginComponent implements OnInit {
+
+export class LoginAdminComponent implements OnInit {
   loginForm: FormGroup; 
   loading = false; 
   submitted = false; 
@@ -47,17 +48,18 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true; 
-    this.authenticationService.loginClient(this.f.email.value, this.f.password.value)
+    this.authenticationService.loginAdmin(this.f.email.value, this.f.password.value)
     .pipe(first())
     .subscribe(
       data => {
-        console.log('Client Logged In')
-        this.router.navigate(['/clientPage']); 
+        console.log('ADMIN-Man!')
+        this.router.navigate(['/splashPage']); //! THIS NEEDS TO ROUTE TO RECRUITER SPLASH
       },
       error => {
         this.alertService.error(error); 
         this.loading = false; 
       });
   }
-
 }
+
+//! Make sure that all endpoints go to each req table.

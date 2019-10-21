@@ -7,7 +7,6 @@ import { JwtInterceptor } from './guards/jwt.interceptor';
 import { ErrorInterceptor } from './guards/error.interceptor'; 
 import { AppComponent } from './app.component';
 import { AlertComponent } from './alert/alert.component';
-import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RecSearchComponent } from './rec-search/rec-search.component';
@@ -16,15 +15,15 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
 import { MessageComponent } from './message/message.component';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertComponent,
-    HomeComponent,
     LoginComponent,
     RegisterComponent,
     RecSearchComponent,
@@ -32,8 +31,10 @@ import { MessageComponent } from './message/message.component';
     AdminComponent,
     PageNotFoundComponent,
     FullComponent,
+    LoginRecruiterComponent,
+    LoginAdminComponent,
+    RegisterRecruiterComponent
     MessageComponent
-
   ],
   imports: [
     BrowserModule,
