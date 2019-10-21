@@ -16,4 +16,5 @@ export class ClientService {
   delete(fullName: string) {
     return this.http.delete(`${this.serverURL}/${fullName}`)
   }
+  
 }

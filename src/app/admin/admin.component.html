@@ -12,12 +12,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Oswald" rel="stylesheet">
-        
-      
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" >
-    
 
     <!-- Material Design Bootstrap -->
     <link rel="stylesheet" type="text/css" href="/css/mdb.min.css" >
@@ -31,9 +28,7 @@
             padding-top: 3rem;
             padding-bottom: 2rem;
            
-        }
-
-        
+        } 
 
         .widget-wrapper {
             padding-bottom: 2rem;
@@ -62,14 +57,14 @@
         }
 
         .navbar {
-            /* background-color: #676b74; */
             background-color: black !important;
+            color: whitesmoke;
         }
 
         footer.page-footer {
-            /* background-color: #676b74; */
             background-color: black !important;
             margin-top: 2rem;
+            text-align: left;
         }
         .card {
             font-weight: 300;
@@ -87,9 +82,7 @@
             /* opacity: .1; */
             z-index: -1;
         }
-
-        
-        
+      
     </style>
 
 </head>
@@ -102,12 +95,12 @@
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container">
-                <a class="navbar-brand" href="#">eRecruit</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                <h2 className="adminTitle">eRecruit - Logged in as {{users.fullName}}</h2>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+                 -->
             </div>
         </nav>
 
@@ -120,45 +113,16 @@
             <div class="row">
 
                 <!--Sidebar-->
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
 
                     <div class="widget-wrapper">
-                        <h4>Welcome back {{client.fullName}} </h4>
-                        <br>
                         <div class="list-group">
-                            
-                            <!-- <button style="margin-left: 210px; margin-top: -40px; margin-right: 10px; z-index: 3">Edit</button> -->
-                            <a routerLink="client.component.html" class="list-group-item">Clients</a>
-                            <a routerLink="client.component.html" class="list-group-item">Recruiters</a>
-                            <a routerLink="client.component.html" class="list-group-item">Jobs</a>
-                            <a routerLink="search.component.html" class="list-group-item">Search</a>
+                            <a class="list-group-item">Clients</a>
+                            <a class="list-group-item">Recruiters</a>
                             <a (click)="logout()" class="list-group-item">Logout</a>
-                            
                         </div>
                     </div>
 
-                    <!-- <div class="widget-wrapper wow fadeIn" data-wow-delay="0.4s">
-                        <h4>Subscription form:</h4>
-                        <br>
-                        <div class="card">
-                            <div class="card-body">
-                                <p><strong>Subscribe to our newsletter</strong></p>
-                                <p>Once a week we will send you a summary of the most useful news</p>
-                                <div class="md-form">
-                                    <i class="fa fa-user prefix"></i>
-                                    <input type="text" id="form1" class="form-control">
-                                    <label for="form1">Your name</label>
-                                </div>
-                                <div class="md-form">
-                                    <i class="fa fa-envelope prefix"></i>
-                                    <input type="text" id="form2" class="form-control">
-                                    <label for="form2">Your email</label>
-                                </div>
-                                <button class="btn btn-primary">Submit</button>
-
-                            </div>
-                        </div>
-                    </div> -->
 
                 </div>
                 <!--/.Sidebar-->
@@ -166,142 +130,40 @@
                 <!--Main column-->
                 <div class="col-lg-8">
 
-                    <!--First row-->
-                    <div class="row wow fadeIn" data-wow-delay="0.4s">
-                        <div class="col-md-12">
-                            <!--Product-->
-                            <div class="product-wrapper">
-
-                                <!--Featured image-->
-                                <!--  <div class="view overlay hm-white-light z-depth-1-half"> -->
-                                    <img src="../../assets/benjamin-parker-OhKElOkQ3RE-unsplash.jpg" class="proPic" />
-                                    <!-- <div class="mask">
-                                    </div>
-                                    <h3 class="price"><span class="badge red darken-2">10 $</span></h3>
-                                </div>
-                                /.Featured image --> 
-
-                                <br>
-
-                                <!--Product data-->
-                                <h2 class="h2-responsive mt-4">About Me</h2>
-                                <hr>
-                                <p>I am a thing that does things while at the same time doing these things</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius totam, officiis doloremque
-                                    velit nobis dolor nulla unde architecto alias praesentium, soluta error omnis sint, impedit,
-                                    delectus ipsam eveniet debitis nemo.</p>
-                            </div>
-                            <!--Product-->
-
-                        </div>
-                    </div>
-                    <!--/.First row-->
-
                     <!--Second row-->
                     <div class="row">
 
-                        <!--Heading-->
+                        <!-- DISPLAY TABLE -->
                         <div class="col reviews wow fadeIn" data-wow-delay="0.4s">
                             <h2 class="h2-responsive">Clients</h2>
-                        </div>
-                        
-
-                        <!--First review-->
-                        <div class="media wow fadeIn" data-wow-delay="0.2s">
-                            <a class="media-left" href="#">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image">
-                            </a>
-                            
-                            <div class="media-body ml-4">
+                            <hr/>
+                            <div class="tables">
                                 
-                                <h4 class="media-heading">John Doe</h4>
-                                <ul>
-                                    <li>johndoe@jd.com</li>
-                                    <li>Indianapolis, IN</li>
-                                    <li>Java, C++, .NET</li>
-                                </ul>
-                                <p>I am a junior software developer mainly focusing on Java and C++ with some expereince in .NET</p>
-                  
-                                <button>Delete Me</button>
-                               
-                                <!-- <ul class="rating inline-ul list-unstyled">
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul> -->
-                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure
-                                    soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda.
-                                    Earum sit id ullam eum vel delectus!</p> -->
+                                <table>
+
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr class="infoDisplayed">
+                                        <td>Joe Dirt</td>
+                                        <td>jd@test.com</td>
+                                        <td><button class="userBtn">Remove</button></td>
+                                    </tr>
+                                    
+                                </table>
                             </div>
                         </div>
 
-                        <!--Second review-->
-                        <br>
-                        <div class="media wow fadeIn" data-wow-delay="0.2s">
-                            <a class="media-left" href ="#">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" alt="Generic placeholder image">
-                            </a>
-                            <div class="media-body ml-4">
-                                <h4 class="media-heading">Maria Casie</h4>
-                                <ul>
-                                    <li>mariacasie@mc.com</li>
-                                    <li>Crawfordsville, IN</li>
-                                    <li>JavaScript, React, React Native</li>
-                                </ul>
-                                <p>I am a junior software developer mainly focusing on Java and C++ with some expereince in .NET</p>
-                                <button>Delete Me</button>
-                                <!-- <ul class="rating inline-ul list-unstyled">
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                </ul> -->
-                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure
-                                    soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda.
-                                    Earum sit id ullam eum vel delectus!</p> -->
-                            </div>
-                        </div>
-
-                        <!--Second review-->
-                        <br>
-                        <div class="media wow fadeIn" data-wow-delay="0.2s">
-                            <a class="media-left" href="#">
-                                <img class="rounded-circle" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Generic placeholder image">
-                            </a>
-                            <div class="media-body ml-4">
-                                <h4 class="media-heading">Kate Snow</h4>
-                                <ul>
-                                    <li>katesnow@ks.com</li>
-                                    <li>Djbouti, Djbouti</li>
-                                    <li>MS Word, Excel</li>
-                                </ul>
-                                <p>I am a junior software developer mainly focusing on Java and C++ with some expereince in .NET</p>
-                                <button>Delete Me</button>
-                                <!-- <ul class="rating inline-ul list-unstyled">
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure
-                                    soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda.
-                                    Earum sit id ullam eum vel delectus!</p> -->
-                            </div>
-                        </div>
+                        <br/>                       
 
                     </div>
-                    <!--/.Second row-->
 
                 </div>
-                <!--/.Main column-->
 
             </div>
         
-        <!--/.Main layout-->
         </div>
     </main>
 
@@ -320,80 +182,20 @@
                 
                 <hr class="w-100 clearfix d-sm-none">
                 
-                <div class="col-lg-2 col-md-6 ml-auto">
-                        
-                                <!-- <h5 class="title mb-3"><strong>Search</strong></h5>
-                                <ul>
-                                    <li>
-                                        <a href="#!">Link 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 4</a>
-                                    </li>
-                                </ul> -->
-                    </div>
-                    <!-- <h5 class="title mb-3"><strong>Update Profile</strong></h5>
-                    <ul>
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-                </div> -->
-                <!--/.Second column-->
+                <div class="col-lg-2 col-md-6 ml-auto"></div>
+                    
                 <hr class="w-100 clearfix d-sm-none">
-                <!--Third column-->
-                <!-- <div class="col-lg-2 col-md-6 ml-auto">
-                    <h5 class="footer-links"><strong><a href="client.component.html">Client List</a></strong></h5>
-                    <ul>
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-                </div> -->
-                <!--/.Third column-->
+           
                 <hr class="w-100 clearfix d-sm-none">
-                <!--Fourth column-->
-              
-                <!--/.Fourth column-->
+
             </div>
         </div>
-        <!--/.Footer links-->
+
         <hr>
        
         <!-- Call to action -->
         <div class="call-to-action">
             <h2 class="mb-5">We Make Recruiting E-asy.</h2>
-            <!-- <ul>
-                <li>
-                    <h5>Get our UI KIT for free</h5>
-                </li>
-                <li><a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-primary" rel="nofollow">Sign up!</a></li>
-                <li><a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default" rel="nofollow">Learn more</a></li>
-            </ul> -->
         </div>
        
 
@@ -401,7 +203,6 @@
         <div class="footer-copyright">
             <div class="container-fluid">
                 © 2019 Copyright: Meme Scream Dream Team LLC Inc.
-
             </div>
         </div>
         <!--/.Copyright-->
