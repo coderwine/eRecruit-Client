@@ -4,19 +4,19 @@
 }
 
 .messagePerson {
-    position: relative;
-    left: 22.5%;
-    top: -1060px;
     font-size: 24px;
+    margin-left: 20%;
     padding-left: 16px;
+    z-index: 2;
 }
 
 .messageZone {
     height: 600px;
     width: 1200px;
     position: relative;
-    left: 15%;
+    left: 21%;
     top: -450px;
+    border: 3px solid black;
     
     
 }
@@ -25,6 +25,7 @@
     width: 800px;
     height: 35px;
     position: relative;
-    left: 45%;
+    left: 42.75%;
     top: -400px;
 }
+

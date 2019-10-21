@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { resetFakeAsyncZone } from '@angular/core/testing';
+
+
 
 @Component({
   selector: 'app-message',
@@ -6,14 +9,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
+  messages = ['Begin Messaging... '];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  displayMessage() {
+   
+    
+  addMessage(newMessage: string) {
+    if (newMessage) {
+      this.messages.push(newMessage);
+      
+      
+    }
+
     
   }
+  
+
+  
 
 }

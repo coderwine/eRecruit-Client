@@ -17,6 +17,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MessageComponent } from './message/message.component';
+import { NgChatModule } from 'ng-chat';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -38,9 +40,11 @@ import { MessageComponent } from './message/message.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    NgChatModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
