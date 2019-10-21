@@ -7,12 +7,12 @@ import {AuthenticationService} from '../services/authentication.service';
 
 //! Need to break down what is being pulled and what is needed.
 export interface ClientInformation {
-  fullName: string;
-  email: string;
-  skills: string;
-  location: string;
-  li: string;
-  gh: string;
+  fullName: string,
+  email: string,
+  skills: string,
+  location: string,
+  li: string,
+  gh: string,
   comments: string
 }
 
