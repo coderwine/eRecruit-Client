@@ -7,6 +7,7 @@ import { FullComponent } from './full/full.component';
 import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MessageComponent } from './message/message.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,8 @@ const routes: Routes = [
   {path: 'signup', component: RegisterComponent}, 
   {path: 'splashPage', component: FullComponent},
   {path: 'clientPage', component: ClientComponent},
+  {path: 'messaging', component: MessageComponent},
+  {path: 'adminPortal', component: AdminComponent},
   {path: 'logout', component: LoginComponent},
   // {path: '**', redirectTo: PageNotFoundComponent}
 ];
