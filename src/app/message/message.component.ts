@@ -12,4 +12,8 @@ export class MessageComponent implements OnInit {
   ngOnInit() {
   }
 
+  displayMessage() {
+    
+  }
+
 }
