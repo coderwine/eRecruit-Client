@@ -4,12 +4,12 @@
 
 .regPage {
     height: 100vh;    
-    padding: 25% 0;
+    padding: 5em 10em;
 }
 
 
 .logo {
-    position: fixed;
+    position: relative;
     left: 20px;
     top: 20px;
     height: 175px;
