@@ -13,12 +13,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2|Oswald" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" >
 
     <!-- Material Design Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="/css/mdb.min.css" >
-    <link rel="stylesheet" type="text/css" href="/css/style.css" >
+    <!-- <link rel="stylesheet" type="text/css" href="/css/mdb.min.css" >
+    <link rel="stylesheet" type="text/css" href="/css/style.css" > -->
 
     <!-- Template styles -->
     <style rel="stylesheet">
@@ -95,12 +93,7 @@
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container">
-                <h2 className="adminTitle">eRecruit - Logged in as {{users.fullName}}</h2>
-                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                 -->
+                <h2 className="adminTitle">eRecruit - Logged in as {{users}}</h2>  <!-- NEED TO CONNECT TO ADMIN -->
             </div>
         </nav>
 
@@ -117,8 +110,8 @@
 
                     <div class="widget-wrapper">
                         <div class="list-group">
-                            <a class="list-group-item">Clients</a>
-                            <a class="list-group-item">Recruiters</a>
+                            <a (click)="ClientSearch()"class="list-group-item">Clients</a> <!-- CLICK REF NEEDED-->
+                            <a (click)="recSearch()" class="list-group-item">Recruiters</a> <!-- CLICK REF NEEDED-->
                             <a (click)="logout()" class="list-group-item">Logout</a>
                         </div>
                     </div>
@@ -135,8 +128,10 @@
 
                         <!-- DISPLAY TABLE -->
                         <div class="col reviews wow fadeIn" data-wow-delay="0.4s">
-                            <h2 class="h2-responsive">Clients</h2>
-                            <hr/>
+                            <!-- TOGGLE NEEDED -->
+                            <h2 *ngIf="RecUser" class="h2-responsive">Recruiters</h2>
+                            <h2 *ngIf="ClientUser" class="h2-responsive">Client</h2>
+                          
                             <div class="tables">
                                 
                                 <table>
@@ -146,13 +141,22 @@
                                         <th>Email</th>
                                         <th></th>
                                     </tr>
-                                    <tr class="infoDisplayed">
-                                        <td>Joe Dirt</td>
-                                        <td>jd@test.com</td>
+                                    <!-- Display Recuiters -->
+                                    <tr *ngFor="let users of RecUser" class="infoDisplayed">
+                                        <td>{{users.fullName}}</td>
+                                        <td>{{users.email}}</td>
+                                        <td><button (click)="deleteRec(users)" class="userBtn">Remove</button></td>
+                                    </tr>
+                                    
+                                    <!-- Display Clients -->
+                                    <tr *ngFor="let users of ClientUser" class="infoDisplayed">
+                                        <td>{{users.fullName}}</td>
+                                        <td>{{users.email}}</td>
                                         <td><button class="userBtn">Remove</button></td>
                                     </tr>
                                     
                                 </table>
+
                             </div>
                         </div>
 

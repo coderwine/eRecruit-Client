@@ -25,6 +25,7 @@ a.list-group-item:hover {
     padding-top: 1em;
     color: black;
     background-color: rgba(255,255,255,.4);
+    overflow: auto;
 }
 
 
