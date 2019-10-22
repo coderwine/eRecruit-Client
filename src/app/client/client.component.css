@@ -15,3 +15,12 @@ a.list-group-item:hover {
     bottom: 50%;
     font-size: 36px;
 }
+
+.link {
+    width: 15%;
+    height: 15%;
+    margin: .75em;
+    position: relative;
+    right: 20%;
+    
+}

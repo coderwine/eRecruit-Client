@@ -28,11 +28,12 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
 import {MatDialogModule} from '@angular/material/dialog';
 import { JobsComponent } from './jobs/jobs.component';
 import { FullMessageComponent } from './fullmessage/fullmessage.component';
-import { FormsModule } from '@angular/forms';
 import { ClientmessageComponent } from './clientmessage/clientmessage.component';
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
+
+
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     // MessageComponent
     CustomerComponent,
     CustomerDetailsComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
 
   ],
   imports: [

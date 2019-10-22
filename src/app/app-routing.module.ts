@@ -33,9 +33,8 @@ const routes: Routes = [
   {path: 'clientMessaging', component: ClientmessageComponent},
   {path: 'logout', component: LoginComponent},
   {path: 'jobs', component: JobsComponent},
-  {path: 'customers', 
-    component: CustomerComponent 
-  },
+
+  {path: 'customers', component: CustomerComponent},
   {path: 'customer/add', 
     component: AddCustomerComponent 
   },
