@@ -19,6 +19,7 @@ export class AdminComponent implements OnInit {
   recTitle = 'Recruiters';
   clientTitle = 'Clients';
   displayedColumns = ['fullName', 'email'];
+  isDeleted:boolean = false; 
   
   constructor(
     private router: Router,
@@ -28,10 +29,10 @@ export class AdminComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-
+    this.recSearch
   }
 
-  recSearch(fullName: string, email: string): void {
+  recSearch(): void {
     this.atPullRec.getUsers().subscribe(data => {
       // console.log(data);
       this.RecUser = data;
@@ -39,14 +40,13 @@ export class AdminComponent implements OnInit {
     })
   }
 
-  // deleteRec(user: User): void {
-  //   this.atPullRec.deleteRecruiter(user.id).subscribe( data => {
-  //     console.log('deleteRec point')
-  //     this.RecUser = this.RecUser.filter(d => d !== user);
-  //   })
-  // }
+  deleteRec(user: User): void {
+    this.atPullRec.deleteRecruiter(user.id)
+    this.RecUser = this.RecUser.filter(d => d !== user);
+  
+  }
 
-  ClientSearch(fullName: string, email: string): void {
+  ClientSearch(): void {
     this.atPullClient.getUsers().subscribe(data => {
       // console.log(data);
       this.ClientUser = data;

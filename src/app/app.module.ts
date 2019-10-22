@@ -29,6 +29,8 @@ import { ClientmessageComponent } from './clientmessage/clientmessage.component'
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
+import { PullRecService } from '../app/services/pull-userInfo/pull-rec.service';
+import { PullClientService } from '../app/services/pull-userInfo/pull-client.service';
 
 
 
@@ -67,8 +69,10 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
 
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    PullClientService,
+    PullRecService
   ],
   bootstrap: [AppComponent]
 })
