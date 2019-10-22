@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +25,14 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
 // import { MatTableModule } from '@angular/material/table';
 // import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 // import { MessageComponent } from './message/message.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { JobsComponent } from './jobs/jobs.component';
+import { FullMessageComponent } from './fullmessage/fullmessage.component';
+import { FormsModule } from '@angular/forms';
+import { ClientmessageComponent } from './clientmessage/clientmessage.component';
+import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
 
 @NgModule({
   declarations: [
@@ -33,25 +45,28 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     AdminComponent,
     PageNotFoundComponent,
     FullComponent,
+    JobsComponent,
+    FullMessageComponent,
+    ClientmessageComponent,
     LoginRecruiterComponent,
     LoginAdminComponent,
     RegisterRecruiterComponent,
-    // MatTableModule,
-    // MatPaginatorModule,
-    // MatSortModule
     // MessageComponent
+    CustomerComponent,
+    CustomerDetailsComponent,
+    AddCustomerComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatDialogModule
   ],
   exports: [
-    // MatTableModule,
-    // MatPaginatorModule,
-    // MatSortModule
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 

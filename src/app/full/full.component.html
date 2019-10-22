@@ -126,13 +126,21 @@
                         <h4>Welcome back {{Users.name}} </h4>
                         <br>
                         <div class="list-group">
-                            <a routerLink="profile.component.html" class="list-group-item">My Profile</a>
+                            <a (click)="profile()" class="list-group-item">My Profile</a>
                             <!-- <button style="margin-left: 210px; margin-top: -40px; margin-right: 10px; z-index: 3">Edit</button> -->
-                            <a routerLink="client.component.html" class="list-group-item">Search Clients</a>
-                            <a (click)="message()" class="list-group-item">Messages</a>
+                            <a (click)="clients()" class="list-group-item">Search Clients</a>
+                            <a (click)="jobs()" class="list-group-item">Search Jobs</a>
                             <a (click)="logout()" class="list-group-item">Logout</a>
                             
                         </div>
+                        <div class="api-search">
+                            <input #searchBox placeholder="search for job openings">
+                        </div>
+                        <button  [disabled]="loading" type="submit" (click)="search(searchBox.value)" class="btn btn-primary">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Search Jobs
+                        </button>
+
                     </div>
 
                     <!-- <div class="widget-wrapper wow fadeIn" data-wow-delay="0.4s">
@@ -200,7 +208,7 @@
 
                         <!--Heading-->
                         <div class="col reviews wow fadeIn" data-wow-delay="0.4s">
-                            <h2 class="h2-responsive">Clients</h2>
+                            <h2 class="h2-responsive">My Clients</h2>
                         </div>
                         
 
@@ -220,7 +228,7 @@
                                 </ul>
                                 <p>I am a junior software developer mainly focusing on Java and C++ with some expereince in .NET</p>
                   
-                                <button>Send this person a message</button>
+                                
                                
                                 <!-- <ul class="rating inline-ul list-unstyled">
                                     <li><i class="fa fa-star amber-text"></i></li>
@@ -249,7 +257,7 @@
                                     <li>JavaScript, React, React Native</li>
                                 </ul>
                                 <p>I am a junior software developer mainly focusing on Java and C++ with some expereince in .NET</p>
-                                <button>Send this person a message</button>
+                                
                                 <!-- <ul class="rating inline-ul list-unstyled">
                                     <li><i class="fa fa-star amber-text"></i></li>
                                     <li><i class="fa fa-star amber-text"></i></li>
@@ -277,7 +285,7 @@
                                     <li>MS Word, Excel</li>
                                 </ul>
                                 <p>I am a junior software developer mainly focusing on Java and C++ with some expereince in .NET</p>
-                                <button>Send this person a message</button>
+                                
                                 <!-- <ul class="rating inline-ul list-unstyled">
                                     <li><i class="fa fa-star amber-text"></i></li>
                                     <li><i class="fa fa-star amber-text"></i></li>

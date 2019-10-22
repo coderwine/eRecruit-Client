@@ -1,30 +1,38 @@
+body {
+    overflow-y: hidden;
+}
+
 .people {
     font-size: 20px;
     padding: 1.2em;
 }
 
 .messagePerson {
-    position: relative;
-    left: 22.5%;
-    top: -1060px;
     font-size: 24px;
+    margin-left: 20%;
     padding-left: 16px;
+    z-index: 2;
 }
 
 .messageZone {
     height: 600px;
     width: 1200px;
     position: relative;
-    left: 15%;
-    top: -450px;
-    
-    
+    left: 21%;
+    top: -600px;
+    border: 3px solid black;
+    padding: 10px;
 }
 
 .theMessage {
     width: 800px;
     height: 35px;
     position: relative;
-    left: 45%;
-    top: -400px;
+    left: 42.75%;
+    top: -550px;
+    
+}
+
+#back {
+    color: white !important;
 }
