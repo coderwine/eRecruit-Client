@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './guards/auth.guard'; 
 import { FullComponent } from './full/full.component';
 import { ClientComponent } from './client/client.component';
+import {JobsComponent} from './jobs/jobs.component'
 import { AdminComponent } from './admin/admin.component';
 //import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullMessageComponent } from './fullmessage/fullmessage.component';
@@ -34,25 +35,21 @@ const routes: Routes = [
   {path: 'adminPortal', component: AdminComponent},
   {path: 'clientMessaging', component: ClientmessageComponent},
   {path: 'logout', component: LoginComponent},
-
-  { 
-    path: 'customers', 
+  {path: 'jobs', component: JobsComponent},
+  {path: 'customers', 
     component: CustomerComponent 
   },
-  { 
-    path: 'customer/add', 
+  {path: 'customer/add', 
     component: AddCustomerComponent 
   },
-  { 
-    path: 'customers/:id', 
+  {path: 'customers/:id', 
     component: CustomerDetailsComponent 
   },
-  { 
-    path: '', 
-    redirectTo: 'customers', 
-    pathMatch: 'full'
-  }, 
-  // {path: '**', redirectTo: PageNotFoundComponent}
+//   {path: '', 
+//     redirectTo: 'customers', 
+//     pathMatch: 'full'
+//   }, 
+
 ];
 
 @NgModule({
