@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/delay';
 import {User} from '../models/user';
 import {Observable} from 'rxjs'
 
@@ -10,10 +12,10 @@ import {Observable} from 'rxjs'
 export class ClientService {
 
   constructor(private http: HttpClient) { }
-  private serverURL = 'https://erecruit-server.herokuapp.com/users'
-
-
+  private serverURL = 'https://erecruit-server.herokuapp.com/users';
+ 
   delete(fullName: string) {
     return this.http.delete(`${this.serverURL}/${fullName}`)
   }
+
 }

@@ -14,13 +14,9 @@ import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.compo
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
 //import { MessageComponent } from './message/message.component';
-
 import { CustomerComponent } from './customer/customer.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
-
-
-
 
 const routes: Routes = [
   {path: '', component: LoginComponent, canActivate: [AuthGuard] }, 
@@ -32,7 +28,7 @@ const routes: Routes = [
   {path: 'splashPage', component: FullComponent},
   {path: 'messaging', component: FullMessageComponent},
   {path: 'clientPage', component: ClientComponent},
-  //{path: 'messaging', component: MessageComponent},
+  // {path: 'messaging', component: MessageComponent},
   {path: 'adminPortal', component: AdminComponent},
   {path: 'clientMessaging', component: ClientmessageComponent},
   {path: 'logout', component: LoginComponent},
