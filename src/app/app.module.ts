@@ -15,10 +15,13 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FullMessageComponent } from './fullmessage/fullmessage.component';
+import { NgChatModule } from 'ng-chat';
+import { FormsModule } from '@angular/forms';
+import { ClientmessageComponent } from './clientmessage/clientmessage.component';
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
-import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -31,17 +34,21 @@ import { MessageComponent } from './message/message.component';
     AdminComponent,
     PageNotFoundComponent,
     FullComponent,
+    FullMessageComponent,
+    ClientmessageComponent,
     LoginRecruiterComponent,
     LoginAdminComponent,
     RegisterRecruiterComponent
-    MessageComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    NgChatModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
