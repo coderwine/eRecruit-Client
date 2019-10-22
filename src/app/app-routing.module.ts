@@ -12,6 +12,10 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
 import { MessageComponent } from './message/message.component';
 
+import { CustomerComponent } from './customer/customer.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+
 
 
 const routes: Routes = [
@@ -26,6 +30,24 @@ const routes: Routes = [
   {path: 'messaging', component: MessageComponent},
   {path: 'adminPortal', component: AdminComponent},
   {path: 'logout', component: LoginComponent},
+
+  { 
+    path: 'customers', 
+    component: CustomerComponent 
+  },
+  { 
+    path: 'customer/add', 
+    component: AddCustomerComponent 
+  },
+  { 
+    path: 'customers/:id', 
+    component: CustomerDetailsComponent 
+  },
+  { 
+    path: '', 
+    redirectTo: 'customers', 
+    pathMatch: 'full'
+  }, 
   // {path: '**', redirectTo: PageNotFoundComponent}
 ];
 

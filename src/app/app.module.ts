@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,15 +37,20 @@ import { MessageComponent } from './message/message.component';
     FullComponent,
     LoginRecruiterComponent,
     LoginAdminComponent,
-    RegisterRecruiterComponent
-    MessageComponent
+    RegisterRecruiterComponent,
+    MessageComponent,
+    CustomerComponent,
+    CustomerDetailsComponent,
+    AddCustomerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
