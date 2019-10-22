@@ -134,11 +134,11 @@
                             
                         </div>
                         <div class="api-search">
-                            <input type="search" placeholder="search for job openings">
+                            <input #searchBox placeholder="search for job openings">
                         </div>
-                        <button  [disabled]="loading" type="submit" class="btn btn-primary" routerLink="/jobs">
+                        <button  [disabled]="loading" type="submit" (click)="search(searchBox.value)" class="btn btn-primary">
                             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-                            Search
+                            Search Jobs
                         </button>
 
                     </div>

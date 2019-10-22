@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {JobBoardAPI} from '../services/apicall.service'
+import {ActivatedRoute} from '@angular/router'
 
 @Component({
   selector: 'app-jobs',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./jobs.component.css']
 })
 export class JobsComponent implements OnInit {
+  searchJobs: any;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private jobBoardAPI: JobBoardAPI
+    ) { }
 
   ngOnInit() {
+      this.jobBoardAPI.getJobs().subscribe(data => {
+        this.searchJobs = data;
+        console.log(this.searchJobs)
+    })
   }
 
 }
