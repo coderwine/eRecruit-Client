@@ -22,7 +22,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
-import { MessageComponent } from './message/message.component';
+//import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { MessageComponent } from './message/message.component';
     LoginRecruiterComponent,
     LoginAdminComponent,
     RegisterRecruiterComponent,
-    MessageComponent,
+    //MessageComponent,
     CustomerComponent,
     CustomerDetailsComponent,
     AddCustomerComponent
