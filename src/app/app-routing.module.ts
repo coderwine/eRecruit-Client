@@ -7,12 +7,17 @@ import { FullComponent } from './full/full.component';
 import { ClientComponent } from './client/client.component';
 import {JobsComponent} from './jobs/jobs.component'
 import { AdminComponent } from './admin/admin.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+//import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullMessageComponent } from './fullmessage/fullmessage.component';
 import { ClientmessageComponent } from './clientmessage/clientmessage.component';
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
+//import { MessageComponent } from './message/message.component';
+
+import { CustomerComponent } from './customer/customer.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 
 
 
@@ -26,11 +31,25 @@ const routes: Routes = [
   {path: 'splashPage', component: FullComponent},
   {path: 'messaging', component: FullMessageComponent},
   {path: 'clientPage', component: ClientComponent},
-  {path: 'clientMessaging', component: ClientmessageComponent},
+  //{path: 'messaging', component: MessageComponent},
   {path: 'adminPortal', component: AdminComponent},
+  {path: 'clientMessaging', component: ClientmessageComponent},
   {path: 'logout', component: LoginComponent},
   {path: 'jobs', component: JobsComponent},
-  // {path: '**', redirectTo: PageNotFoundComponent}
+  {path: 'customers', 
+    component: CustomerComponent 
+  },
+  {path: 'customer/add', 
+    component: AddCustomerComponent 
+  },
+  {path: 'customers/:id', 
+    component: CustomerDetailsComponent 
+  },
+//   {path: '', 
+//     redirectTo: 'customers', 
+//     pathMatch: 'full'
+//   }, 
+
 ];
 
 @NgModule({

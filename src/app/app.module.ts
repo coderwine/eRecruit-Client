@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -39,7 +43,10 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     ClientmessageComponent,
     LoginRecruiterComponent,
     LoginAdminComponent,
-    RegisterRecruiterComponent
+    RegisterRecruiterComponent,
+    CustomerComponent,
+    CustomerDetailsComponent,
+    AddCustomerComponent
 
   ],
   imports: [
