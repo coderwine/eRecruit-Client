@@ -5,6 +5,7 @@ export class Customer {
     linkedInURL: string;
     gitHubURL: string;
     portfolioURL: string;
+    img: boolean;
     message: string;
 
 }
