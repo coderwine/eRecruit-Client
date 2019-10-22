@@ -10,11 +10,14 @@
 </nav>
 
 <div *ngIf="searchJobs">
-    <ul class="search-results">
+    <ol class="search-results">
         <li *ngFor="let job of searchJobs.listings.listing">
-            {{job.title}} at
+                <strong>{{job.title}}</strong> at
             {{job.company.name}}
+            <br />
             <a href="{{job.url}}">{{job.url}}</a>
         </li>
-    </ul>
+    </ol>
+
+    
 </div>
