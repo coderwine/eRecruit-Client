@@ -56,4 +56,7 @@ export class ClientComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  message() {
+    this.router.navigate(['/clientMessaging'])
+  }
 }

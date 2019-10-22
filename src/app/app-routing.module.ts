@@ -8,14 +8,26 @@ import { ClientComponent } from './client/client.component';
 import {JobsComponent} from './jobs/jobs.component'
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FullMessageComponent } from './fullmessage/fullmessage.component';
+import { ClientmessageComponent } from './clientmessage/clientmessage.component';
+import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
+import { LoginAdminComponent } from './login-admin/login-admin.component';
+import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
+
 
 
 const routes: Routes = [
   {path: '', component: LoginComponent, canActivate: [AuthGuard] }, 
-  {path: 'login', component: LoginComponent}, 
+  {path: 'login', component: LoginComponent},
+  {path: 'recLogin', component: LoginRecruiterComponent}, 
+  {path: 'adminLogin', component: LoginAdminComponent}, 
   {path: 'signup', component: RegisterComponent}, 
+  {path: 'recSignup', component: RegisterRecruiterComponent}, 
   {path: 'splashPage', component: FullComponent},
+  {path: 'messaging', component: FullMessageComponent},
   {path: 'clientPage', component: ClientComponent},
+  {path: 'clientMessaging', component: ClientmessageComponent},
+  {path: 'adminPortal', component: AdminComponent},
   {path: 'logout', component: LoginComponent},
   {path: 'jobs', component: JobsComponent},
   // {path: '**', redirectTo: PageNotFoundComponent}

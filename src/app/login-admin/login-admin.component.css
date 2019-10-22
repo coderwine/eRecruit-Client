@@ -16,18 +16,18 @@
     height: 175px;
     width: 175px;
     border-radius: 300px;
-    border: 2px solid black;
-    background-color: #59b509;
+    border: 2px solid darkgray;
+    background-color: black;
     margin: 2em;
 }
 
 .logo:hover {
-    background-color: #2b5505;
-    border: 2px solid #59b509;
+    background-color: darkgray;
+    border: 2px solid black;
 }
 
 .btn-primary {
-    background-color: #59b509;
+    background-color: Black;
 }
 
 .logoTitle {
@@ -35,7 +35,7 @@
     text-align: center;
     margin: 25% auto;
     position: relative;
-    color: white;
+    color: whitesmoke;
     font-size: 2.3em;
     font-family: 'Exo', sans-serif;
 }

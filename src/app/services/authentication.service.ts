@@ -29,6 +29,8 @@ export class AuthenticationService {
     return this.currentUserSubject.value;
   }
 
+  //! LOGIN
+  //? Recruiter
   login(email: string, password: string): Observable<User> {
     return this.http.post<User>(`${this.serverURL}/users/login`, {email, password})
     .pipe(map(client => {
@@ -38,17 +40,51 @@ export class AuthenticationService {
     }));
   }
 
+  //? CLient
+  loginClient(email: string, password: string): Observable<User> {
+    return this.http.post<User>(`${this.serverURL}/client/login`, {email, password})
+    .pipe(map(client => {
+      localStorage.setItem('currentClient', JSON.stringify(client));
+      this.currentUserSubject.next(client);
+      return client;
+    }));
+  }
+
+  //? Admin
+  loginAdmin(email: string, password: string): Observable<User> {
+    return this.http.post<User>(`${this.serverURL}/admin/login`, {email, password})
+    .pipe(map(client => {
+      localStorage.setItem('currentClient', JSON.stringify(client));
+      this.currentUserSubject.next(client);
+      return client;
+    }));
+  }
+
+
+  //! SIGN UP
+  //? Recruiter
   signup(user: User): Observable<User> {
     return this.http.post<User>(`${this.serverURL}/users/signup`, user)
     .pipe(map(client => {
       localStorage.setItem('currentClient', JSON.stringify(client));
       this.currentUserSubject.next(client);
-      console.log('USER SIGNUP')
+      console.log('Recruiter SIGNUP')
       return client;
     }))
   }
 
-  
+  //? Client
+  signupClient(user: User): Observable<User> {
+    return this.http.post<User>(`${this.serverURL}/client/signup`, user)
+    .pipe(map(client => {
+      localStorage.setItem('currentClient', JSON.stringify(client));
+      this.currentUserSubject.next(client);
+      console.log('Client SIGNUP')
+      return client;
+    }))
+  }
+
+  // *ALL ADMINS ARE CREATED VIA POSTMAN
 
   logout() {
     localStorage.removeItem('currentClient');

@@ -4,14 +4,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators'; 
 import { AlertService } from '../services/alert.service'; 
 import { AuthenticationService } from '../services/authentication.service'; 
-import {User} from '../models/user'
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-register-recruiter',
+  templateUrl: './register-recruiter.component.html',
+  styleUrls: ['./register-recruiter.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterRecruiterComponent implements OnInit {
   registerForm: FormGroup; 
   loading = false; 
   submitted = false; 
@@ -23,7 +22,7 @@ export class RegisterComponent implements OnInit {
     private alertService: AlertService
   ) { 
     if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/signupClient']); 
+      this.router.navigate(['/signup']); 
     }
   }
 
@@ -46,13 +45,12 @@ export class RegisterComponent implements OnInit {
 
     this.loading = true; 
     console.log(this.registerForm.value)
-    this.authenticationService.signupClient(this.registerForm.value)
+    this.authenticationService.signup(this.registerForm.value)
     .pipe(first())
     .subscribe(
       data => {
         this.alertService.success('Registration successful', true); 
-        console.log(User);
-        console.log('Client registered!');
+        console.log('Recruiter Registered!');
         this.router.navigate(['/clientPage']); 
       }, 
       (error) => {
@@ -61,7 +59,4 @@ export class RegisterComponent implements OnInit {
       }); 
       
   }
-
-
-
 }
