@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class CustomerService {
-  private customersUrl = 'https://erecruit-server.herokuapp.com/client-logs';  // URL to web api
+  private customersUrl = 'https://erecruit-server.herokuapp.com/client-logs'; 
   constructor( 
     private http: HttpClient
   ) { }
@@ -40,7 +40,8 @@ export class CustomerService {
   updateCustomer (customer: Customer | number): Observable<Customer> {
     const id = typeof customer === 'number' ? customer : customer.id;
     const url = `${this.customersUrl}/${id}`;
-
     return this.http.put<Customer>(url, customer, httpOptions);
   }
+
+ 
 }

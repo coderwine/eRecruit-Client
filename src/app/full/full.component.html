@@ -126,20 +126,15 @@
                         <h4>Welcome back {{Users.name}} </h4>
                         <br>
                         <div class="list-group">
-                            <a (click)="profile()" class="list-group-item">My Profile</a>
+                            <!-- <a routerLink="customers" class="btn btn-primary" role="button" routerLinkActive="active">My Profile</a>  -->
+                            <a routerLink="/customers" class="list-group-item">My Profile</a>
                             <!-- <button style="margin-left: 210px; margin-top: -40px; margin-right: 10px; z-index: 3">Edit</button> -->
                             <a (click)="clients()" class="list-group-item">Search Clients</a>
-                            <a (click)="jobs()" class="list-group-item">Search Jobs</a>
+                            <a  routerLink="/jobs" class="list-group-item">Job List</a>
                             <a (click)="logout()" class="list-group-item">Logout</a>
                             
                         </div>
-                        <div class="api-search">
-                            <input #searchBox placeholder="search for job openings">
-                        </div>
-                        <button  [disabled]="loading" type="submit" (click)="search(searchBox.value)" class="btn btn-primary">
-                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-                            Search Jobs
-                        </button>
+                        
 
                     </div>
 

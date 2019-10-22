@@ -38,7 +38,5 @@ export class FullComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  message() {
-    this.router.navigate(['/messaging'])
-  }
+  
 }

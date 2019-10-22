@@ -21,6 +21,7 @@ import { CustomerDetailsComponent } from './customer-details/customer-details.co
 
 
 
+
 const routes: Routes = [
   {path: '', component: LoginComponent, canActivate: [AuthGuard] }, 
   {path: 'login', component: LoginComponent},
@@ -36,9 +37,8 @@ const routes: Routes = [
   {path: 'clientMessaging', component: ClientmessageComponent},
   {path: 'logout', component: LoginComponent},
   {path: 'jobs', component: JobsComponent},
-  {path: 'customers', 
-    component: CustomerComponent 
-  },
+
+  {path: 'customers', component: CustomerComponent},
   {path: 'customer/add', 
     component: AddCustomerComponent 
   },
