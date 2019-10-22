@@ -133,6 +133,14 @@
                             <a (click)="logout()" class="list-group-item">Logout</a>
                             
                         </div>
+                        <div class="api-search">
+                            <input #searchBox placeholder="search for job openings">
+                        </div>
+                        <button  [disabled]="loading" type="submit" (click)="search(searchBox.value)" class="btn btn-primary">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Search Jobs
+                        </button>
+
                     </div>
 
                     <!-- <div class="widget-wrapper wow fadeIn" data-wow-delay="0.4s">

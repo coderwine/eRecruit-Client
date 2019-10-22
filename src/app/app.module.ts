@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'; 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,8 +19,8 @@ import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { JobsComponent } from './jobs/jobs.component';
 import { FullMessageComponent } from './fullmessage/fullmessage.component';
-import { NgChatModule } from 'ng-chat';
 import { FormsModule } from '@angular/forms';
 import { ClientmessageComponent } from './clientmessage/clientmessage.component';
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
@@ -34,11 +38,15 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     AdminComponent,
     PageNotFoundComponent,
     FullComponent,
+    JobsComponent,
     FullMessageComponent,
     ClientmessageComponent,
     LoginRecruiterComponent,
     LoginAdminComponent,
-    RegisterRecruiterComponent
+    RegisterRecruiterComponent,
+    CustomerComponent,
+    CustomerDetailsComponent,
+    AddCustomerComponent
 
   ],
   imports: [
@@ -47,8 +55,7 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule,
-    NgChatModule
+    MatDialogModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 

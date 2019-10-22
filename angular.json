@@ -27,9 +27,13 @@
               "src/styles.css",
               "src/app/full/css/bootstrap.min.css",
               "src/app/full/css/mdb.min.css",
-              "src/app/full/css/style.css"
+              "src/app/full/css/style.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
