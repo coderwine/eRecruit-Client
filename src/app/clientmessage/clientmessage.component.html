@@ -64,14 +64,15 @@
 
         .navbar {
             /* background-color: #676b74; */
-            background: linear-gradient(120deg, #0990b5, #066b87 95%);
+            background: linear-gradient(120deg, #59B509, #2B5505 95%);
         }
 
         footer.page-footer {
             /* background-color: #676b74; */
-            background: linear-gradient(120deg, #0990b5, #066b87 95%);
+            background: linear-gradient(240deg, #59B509,  #2B5505 95%);
             margin-top: 2rem;
         }
+       
         .card {
             font-weight: 300;
         }
@@ -119,22 +120,9 @@
 
 <div>
     <h2>Messages</h2>
+
     <hr />
     <br />
-
-
-    <!-- <input #newHero
-      (keyup.enter)="addHero(newHero.value)"
-      (blur)="addHero(newHero.value); newHero.value='' "> -->
-
-    <!-- <button (click)="addHero(newHero.value)">Add</button>
-
-    <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul> -->
-
-    
-
-
-
 
     <label class="messagePerson">Guy I am talking to</label>
     <ul>
@@ -172,13 +160,9 @@
         </li>
     </ul>
 
-
-
     
-        
-        
-        
     <label readonly class="messageZone">
+        <p>{{fullmessage.newMessage}}</p>
         <p *ngFor="let message of messages">{{message}}</p>
     </label>
     <br />

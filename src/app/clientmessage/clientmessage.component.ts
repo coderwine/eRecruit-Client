@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FullMessageComponent } from '../fullmessage/fullmessage.component';
 
 @Component({
   selector: 'app-clientmessage',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clientmessage.component.css']
 })
 export class ClientmessageComponent implements OnInit {
-  messages = ['Begin Messaging... '];
+  messages = ['Begin Messaging...'];
 
   constructor() { }
 
@@ -19,6 +20,17 @@ export class ClientmessageComponent implements OnInit {
       
       
     }
-
   }
+
+  
+
+  // @Output() messageEvent = new EventEmitter<string>();
+
+  // sendMessage() {
+  //   this.messageEvent.push(newMessage);
+  // }
+
+  // recieveMessage($event) {
+  //   this.messages = $event
+  // }
 }
