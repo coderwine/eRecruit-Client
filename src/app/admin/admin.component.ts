@@ -39,12 +39,12 @@ export class AdminComponent implements OnInit {
     })
   }
 
-  deleteRec(user: User): void {
-    this.atPullRec.deleteRecruiter(user.id).subscribe( data => {
-      console.log('deleteRec point')
-      this.RecUser = this.RecUser.filter(d => d !== user);
-    })
-  }
+  // deleteRec(user: User): void {
+  //   this.atPullRec.deleteRecruiter(user.id).subscribe( data => {
+  //     console.log('deleteRec point')
+  //     this.RecUser = this.RecUser.filter(d => d !== user);
+  //   })
+  // }
 
   ClientSearch(fullName: string, email: string): void {
     this.atPullClient.getUsers().subscribe(data => {
