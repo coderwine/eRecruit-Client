@@ -1,4 +1,60 @@
+body {
+    background-image: radial-gradient(rgba(255,255,255,.4), 
+                      rgba(0,0,0,.6), 
+                      rgba(0,0,0,1)), url('../../assets/bill-oxford--fGqsewtsJY-unsplash.jpg');
+    background-size: cover;
+}
+
+h4 {
+    color: whitesmoke;
+}
+.reviews{
+    background-color: rgba(0,0,0,.2);
+    border: 2pt solid black;
+    color: whitesmoke;
+}
+
 a.list-group-item:hover {
     background-color: black !important;
     color: white;
+}
+
+.tables {
+    height: 80vh;
+    border: 2pt solid black;
+    padding-top: 1em;
+    color: black;
+    background-color: rgba(255,255,255,.4);
+    overflow: auto;
+}
+
+
+/* TABLE BUILDS */
+.userBtn {
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+.userBtn:hover {
+    color: red;
+}
+
+table {
+    width: 100%;    
+}
+
+table th {
+    font-size: 2em;
+    border-bottom: 2pt solid black;
+}
+
+table td {
+    padding: 1em 0;
+    font-size: 1em;
+}
+
+.infoDisplayed:hover {
+    background-color: black;
+    color: whitesmoke;
 }
