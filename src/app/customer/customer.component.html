@@ -1,0 +1,4 @@
+<h5>Click the button with your id# to edit info</h5>
+<div *ngFor="let cust of customers">
+  <a [routerLink]="['/customers', cust.id]" style="color:black"><span class="badge badge-dark">Client {{cust.id}}</span></a>
+</div>

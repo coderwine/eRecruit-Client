@@ -21,7 +21,14 @@
     "@angular/platform-browser": "^8.2.9",
     "@angular/platform-browser-dynamic": "~8.2.8",
     "@angular/router": "~8.2.8",
+<<<<<<< HEAD
+    "angular-bootstrap-md": "^8.4.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "mdbootstrap": "^4.8.11",
+=======
     "ng-chat": "^2.0.5",
+>>>>>>> 9c1cf7a2c4a569716db70231c4763d85bbce7d2c
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
