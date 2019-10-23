@@ -25,15 +25,15 @@ export class PullRecService {
       return this.http.get<User[]>(this.RecURL);
   }
 
-  // deleteRecruiter(id: number) {
-  //   console.log('DELETE-ISH');
-  //   return this.http.delete(this.RecURL +'/'+ id);
-  // }
-
-  deleteRecruiter(user: User | number): Observable<User> {
-    const id = typeof user === 'number' ? user : user.id;
-    const url = `${this.RecURL}/${id}`;
-    console.log('new delete')
-    return this.http.delete<User>(url, httpOptions);
+  deleteRecruiter(id: number) {
+    console.log('DELETE-ISH');
+    return this.http.delete(this.RecURL +'/'+ id);
   }
+
+  // deleteRecruiter(user: User | number): Observable<User> {
+  //   const id = typeof user === 'number' ? user : user.id;
+  //   const url = `${this.RecURL}/${id}`;
+  //   console.log('new delete')
+  //   return this.http.delete<User>(url, httpOptions);
+  // }
 }  
