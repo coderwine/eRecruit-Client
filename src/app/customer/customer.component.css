@@ -15,3 +15,9 @@ h3 {
     margin: 10px;
     
 }
+
+footer.page-footer {
+    /* background-color: #676b74; */
+    background: linear-gradient(240deg, #0990b5,  #066b87 95%);
+    margin-top: 2rem;
+}

@@ -2,3 +2,9 @@
     /* background-color: #676b74; */
     background: linear-gradient(120deg, #59B509, #2B5505 95%);
 }
+
+footer.page-footer {
+    background: linear-gradient(120deg, #59B509, #2B5505 95%);
+    margin-top: 2rem;
+    text-align: left;
+}
