@@ -18,7 +18,6 @@ import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
-
 // import { MatTableModule } from '@angular/material/table';
 // import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 // import { MessageComponent } from './message/message.component';
@@ -32,6 +31,9 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { CustomerClientComponent } from './customer-client/customer-client.component';
 import { CustomerClientDetailsComponent } from './customer-client-details/customer-client-details.component';
+import { PullRecService } from '../app/services/pull-userInfo/pull-rec.service';
+import { PullClientService } from '../app/services/pull-userInfo/pull-client.service';
+
 
 
 
@@ -72,8 +74,10 @@ import { CustomerClientDetailsComponent } from './customer-client-details/custom
 
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
-    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+    PullClientService,
+    PullRecService
   ],
   bootstrap: [AppComponent]
 })
