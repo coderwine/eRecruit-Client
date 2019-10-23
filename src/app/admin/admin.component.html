@@ -93,7 +93,7 @@
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container">
-                <h2 className="adminTitle">eRecruit - Logged in as {{users}}</h2>  <!-- NEED TO CONNECT TO ADMIN -->
+                <h2 className="adminTitle">eRecruit</h2>  <!-- NEED TO CONNECT TO ADMIN -->
             </div>
         </nav>
 
@@ -109,9 +109,10 @@
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
 
                     <div class="widget-wrapper">
-                        <div class="list-group">
-                            <a (click)="ClientSearch()"class="list-group-item">Clients</a> <!-- CLICK REF NEEDED-->
-                            <a (click)="recSearch()" class="list-group-item">Recruiters</a> <!-- CLICK REF NEEDED-->
+                        <div class="list-group" ng-app="displayTitle" ng-controller="Ctrl">
+                            <a (click)="ClientSearch()"class="list-group-item">Clients</a> 
+                            <a (click)="recSearch()" class="list-group-item">Recruiters</a> 
+                            <a (click)="clear()" class="list-group-item">Clear</a> 
                             <a (click)="logout()" class="list-group-item">Logout</a>
                         </div>
                     </div>
@@ -129,20 +130,23 @@
                         <!-- DISPLAY TABLE -->
                         <div class="col reviews wow fadeIn" data-wow-delay="0.4s">
                             <!-- TOGGLE NEEDED -->
-                            <h2 *ngIf="RecUser" class="h2-responsive">Recruiters</h2>
-                            <h2 *ngIf="ClientUser" class="h2-responsive">Client</h2>
-                          
+                            <!-- <h2 class="h2-responsive">Users</h2>  -->
+                            <!-- <h2 *ngIf="RecUser" class="h2-responsive">{{recTitle}}</h2>
+                            <h2 *ngIf="ClientUser" class="h2-responsive">{{clientTitle}}</h2> -->
+                            
                             <div class="tables">
                                 
                                 <table>
 
                                     <tr>
+                                        <th>Role</th>
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th></th>
                                     </tr>
                                     <!-- Display Recuiters -->
                                     <tr *ngFor="let users of RecUser" class="infoDisplayed">
+                                        <td>{{recTitle}}</td>
                                         <td>{{users.fullName}}</td>
                                         <td>{{users.email}}</td>
                                         <td><button (click)="deleteRec(users)" class="userBtn">Remove</button></td>
@@ -150,9 +154,10 @@
                                     
                                     <!-- Display Clients -->
                                     <tr *ngFor="let users of ClientUser" class="infoDisplayed">
+                                        <td>{{clientTitle}}</td>
                                         <td>{{users.fullName}}</td>
                                         <td>{{users.email}}</td>
-                                        <td><button class="userBtn">Remove</button></td>
+                                        <td><button (click)="deleteClient(users)" class="userBtn">Remove</button></td>
                                     </tr>
                                     
                                 </table>

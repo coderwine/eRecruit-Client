@@ -23,4 +23,9 @@ export class PullClientService {
   getUsers(): Observable<User[]> {
       return this.http.get<User[]>(this.RecURL);
   }
+
+  deleteClient(id: number) {
+    console.log('Client Deleted');
+    return this.http.delete(this.RecURL +'/'+ id);
+  }
 }

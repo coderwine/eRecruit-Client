@@ -30,7 +30,7 @@ export class RegisterRecruiterComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       fullName: ['', Validators.required], 
       email: ['', [Validators.required, Validators.email]], 
-      password: ['', [Validators.required, Validators.minLength(4)]]
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 
@@ -51,7 +51,7 @@ export class RegisterRecruiterComponent implements OnInit {
       data => {
         this.alertService.success('Registration successful', true); 
         console.log('Recruiter Registered!');
-        this.router.navigate(['/clientPage']); 
+        this.router.navigate(['/splashPage']); 
       }, 
       (error) => {
         this.alertService.error(error); 
