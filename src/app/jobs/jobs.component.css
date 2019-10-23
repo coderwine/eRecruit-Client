@@ -14,3 +14,9 @@
 li {
     margin: 3px
 }
+
+p {
+    padding: .4em;
+    letter-spacing: .2em;
+    color: white;
+}

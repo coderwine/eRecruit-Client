@@ -25,6 +25,9 @@ import { ClientmessageComponent } from './clientmessage/clientmessage.component'
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { CustomerClientComponent } from './customer-client/customer-client.component';
+import { CustomerClientDetailsComponent } from './customer-client-details/customer-client-details.component';
 
 
 
@@ -48,6 +51,8 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     CustomerComponent,
     CustomerDetailsComponent,
     AddCustomerComponent,
+    CustomerClientComponent,
+    CustomerClientDetailsComponent,
 
   ],
   imports: [
@@ -56,7 +61,7 @@ import { RegisterRecruiterComponent } from './register-recruiter/register-recrui
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatTooltipModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 

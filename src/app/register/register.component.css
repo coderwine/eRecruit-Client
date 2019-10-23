@@ -28,6 +28,11 @@
 
 .btn-primary {
     background-color: #59b509;
+    border: black !important;
+}
+
+.btn-primary:hover {
+    background-color: #2b5505 !important;
 }
 
 .logoTitle {

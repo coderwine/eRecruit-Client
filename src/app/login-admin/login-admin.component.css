@@ -24,10 +24,17 @@
 .logo:hover {
     background-color: darkgray;
     border: 2px solid black;
+ 
 }
 
 .btn-primary {
-    background-color: Black;
+    background-color: black;
+    border: black;
+}
+
+.btn-primary:hover {
+    background-color: darkgray !important;
+   
 }
 
 .logoTitle {

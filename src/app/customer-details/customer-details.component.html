@@ -1,4 +1,23 @@
-<h4><span class="badge badge-light ">Client {{customer.id}}</span></h4>
+<header>
+        
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container">
+            <a class="navbar-brand" href="/splashPage">eRecruit</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+        </div>
+    </nav>
+
+</header>
+
+
+
+
+<h4><span class="badge badge-light ">Recruiter {{customer.id}}</span></h4>
 <div [hidden]="submitted">
     <form (ngSubmit)="update()" #detailCustomerForm="ngForm">
       <div class="form-group">
@@ -73,7 +92,7 @@
  
       <div class="btn-group btn-group-sm">
         <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
-        <button type="submit" class="btn btn-dark" (click)="update()" >Update</button>
+        <button type="submit" class="btn btn-dark" (click)="update()" [disabled]="!detailCustomerForm.form.valid">Update</button>
         <!-- <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> -->
       </div>
     </form>

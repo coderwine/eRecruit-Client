@@ -27,7 +27,12 @@
 }
 
 .btn-primary {
-    background-color: #066b87;
+    background-color: #0990b5;
+    border: black;
+}
+
+.btn-primary:hover {
+    background-color: #066b87 !important;
 }
 
 .logoTitle {

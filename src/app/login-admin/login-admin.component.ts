@@ -53,7 +53,7 @@ export class LoginAdminComponent implements OnInit {
     .subscribe(
       data => {
         console.log('ADMIN-Man!')
-        this.router.navigate(['/splashPage']); //! THIS NEEDS TO ROUTE TO RECRUITER SPLASH
+        this.router.navigate(['/adminPortal']); //! THIS NEEDS TO ROUTE TO RECRUITER SPLASH
       },
       error => {
         this.alertService.error(error); 
