@@ -19,6 +19,8 @@ import {CustomerClientComponent} from './customer-client/customer-client.compone
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerClientDetailsComponent } from './customer-client-details/customer-client-details.component';
+import {SearchClientsComponent} from './search-clients/search-clients.component';
+import {SearchRecruitersComponent} from './search-recruiters/search-recruiters.component'
 
 const routes: Routes = [
   {path: '', component: LoginComponent, canActivate: [AuthGuard] }, 
@@ -38,17 +40,13 @@ const routes: Routes = [
 
   {path: 'customers', component: CustomerComponent},
   {path: 'customers-client', component: CustomerClientComponent},
-  {path: 'customer/add', 
-    component: AddCustomerComponent 
-  },
   {path: 'customers/:id', 
     component: CustomerDetailsComponent 
   },
-  { path: 'customers-client/:id', component: CustomerClientDetailsComponent}
-//   {path: '', 
-//     redirectTo: 'customers', 
-//     pathMatch: 'full'
-//   }, 
+  { path: 'customers-client/:id', component: CustomerClientDetailsComponent},
+  {path: 'search-clients', component: SearchClientsComponent},
+  {path: 'search-recruiters', component: SearchRecruitersComponent},
+
 
 ];
 

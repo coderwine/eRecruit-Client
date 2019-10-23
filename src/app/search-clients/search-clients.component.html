@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- <title>Material Design Bootstrap</title> -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Oswald" rel="stylesheet">
+
+
+    <!-- Material Design Bootstrap -->
+    <!-- <link rel="stylesheet" type="text/css" href="/css/mdb.min.css" >
+    <link rel="stylesheet" type="text/css" href="/css/style.css" > -->
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+           
+        } 
+
+        .widget-wrapper {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
+        .reviews {
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .price {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-top: -2px;
+        }
+
+        .price .tag {
+            margin: 0;
+        }
+
+        .navbar {
+            /* background-color: #676b74; */
+            background: linear-gradient(120deg, #0990b5, #066b87 95%);
+        }
+
+        footer.page-footer {
+            background: linear-gradient(240deg, #0990b5, #066b87 95%);
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .card {
+            font-weight: 300;
+        }
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+
+        .backgroundy {
+            background: rgba(0, 0, 0, 0), url("../../eRecruit-Client/src/assets/back.jpeg") ;
+            background-size: cover;
+            /* opacity: .1; */
+            z-index: -1;
+        }
+      
+    </style>
+
+</head>
+
+<body>
+
+    
+        <header>
+        
+                <!--Navbar-->
+                <nav class="navbar navbar-expand-lg navbar-dark ">
+                    <div class="container">
+                        <a class="navbar-brand" href="/splashPage">eRecruit</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                    </div>
+                </nav>
+        
+            </header>
+        
+
+    <main class="backgroundy">
+        <!--Main layout-->
+        <div class="container whiteBox">
+
+            <div class="row">
+
+                <!--Sidebar-->
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+
+                    <div class="widget-wrapper">
+                        <div class="list-group">
+                            <a (click)="ClientSearch()"class="list-group-item">Clients</a> <!-- CLICK REF NEEDED-->
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <!--/.Sidebar-->
+
+                <!--Main column-->
+                <div class="col-lg-8">
+
+                    <!--Second row-->
+                    <div class="row">
+
+                        <!-- DISPLAY TABLE -->
+                        <div class="col reviews wow fadeIn" data-wow-delay="0.4s">
+                            <!-- TOGGLE NEEDED -->
+                            <h2 *ngIf="RecUser" class="h2-responsive">Recruiters</h2>
+                            <h2 *ngIf="ClientUser" class="h2-responsive">Client</h2>
+                          
+                            <div class="tables">
+                                
+                                <table>
+
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th></th>
+                                    </tr>
+                               
+                                    
+                                    <!-- Display Clients -->
+                                    <tr *ngFor="let users of ClientUser" class="infoDisplayed">
+                                        <td>{{users.fullName}}</td>
+                                        <td>{{users.email}}</td>
+                                        <td><button class="userBtn">Add Me</button></td>
+                                    </tr>
+                                    
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <br/>                       
+
+                    </div>
+
+                </div>
+
+            </div>
+        
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only">
+
+        <!--Footer links-->
+        <div class="container-fluid">
+            <div class="row">
+                <!--First column-->
+                <div class="col-lg-4 col-md-6 ml-auto">
+                    <h5 class="title mb-3"><strong>About</strong></h5>
+                    <p>eRecruit was designed with job seekers in mind.</p>
+                    <p>Having one central location where recruiters can directly connect with clients makes for an easier job placement for clients through a recruiter.</p>
+                </div>
+                
+                <hr class="w-100 clearfix d-sm-none">
+                
+                <div class="col-lg-2 col-md-6 ml-auto"></div>
+                    
+                <hr class="w-100 clearfix d-sm-none">
+           
+                <hr class="w-100 clearfix d-sm-none">
+
+            </div>
+        </div>
+
+        <hr>
+       
+        <!-- Call to action -->
+        <div class="call-to-action">
+            <h2 class="mb-5">We Make Recruiting E-asy.</h2>
+        </div>
+       
+
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2019 Copyright: Meme Scream Dream Team LLC Inc.
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>

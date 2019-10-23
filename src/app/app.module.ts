@@ -33,6 +33,8 @@ import { CustomerClientComponent } from './customer-client/customer-client.compo
 import { CustomerClientDetailsComponent } from './customer-client-details/customer-client-details.component';
 import { PullRecService } from '../app/services/pull-userInfo/pull-rec.service';
 import { PullClientService } from '../app/services/pull-userInfo/pull-client.service';
+import { SearchClientsComponent } from './search-clients/search-clients.component';
+import { SearchRecruitersComponent } from './search-recruiters/search-recruiters.component';
 
 
 
@@ -60,6 +62,8 @@ import { PullClientService } from '../app/services/pull-userInfo/pull-client.ser
     AddCustomerComponent,
     CustomerClientComponent,
     CustomerClientDetailsComponent,
+    SearchClientsComponent,
+    SearchRecruitersComponent,
 
   ],
   imports: [

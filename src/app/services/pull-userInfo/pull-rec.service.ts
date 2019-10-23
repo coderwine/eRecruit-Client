@@ -25,6 +25,8 @@ export class PullRecService {
       return this.http.get<User[]>(this.RecURL);
   }
 
+
+
   deleteRecruiter(id: number) {
     console.log('DELETE-ISH');
     return this.http.delete(this.RecURL +'/'+ id);

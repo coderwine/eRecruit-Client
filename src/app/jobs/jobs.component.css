@@ -20,3 +20,9 @@ p {
     letter-spacing: .2em;
     color: white;
 }
+
+footer.page-footer {
+    /* background-color: #676b74; */
+    background: linear-gradient(240deg, #0990b5,  #066b87 95%);
+    margin-top: 2rem;
+}
