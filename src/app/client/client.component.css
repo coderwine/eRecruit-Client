@@ -3,6 +3,10 @@ a.list-group-item:hover {
     color: white;
 }
 
+.list-group-item {
+    color: black !important;
+}
+
 .proPic {
     width: 30%;
     height: 30%;

@@ -18,7 +18,6 @@ import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
-// import { MatDialogModule } from '@angular/material/dialog';
 // import { MatTableModule } from '@angular/material/table';
 // import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
 // import { MessageComponent } from './message/message.component';
@@ -29,8 +28,12 @@ import { ClientmessageComponent } from './clientmessage/clientmessage.component'
 import { LoginRecruiterComponent } from './login-recruiter/login-recruiter.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { CustomerClientComponent } from './customer-client/customer-client.component';
+import { CustomerClientDetailsComponent } from './customer-client-details/customer-client-details.component';
 import { PullRecService } from '../app/services/pull-userInfo/pull-rec.service';
 import { PullClientService } from '../app/services/pull-userInfo/pull-client.service';
+
 
 
 
@@ -55,6 +58,8 @@ import { PullClientService } from '../app/services/pull-userInfo/pull-client.ser
     CustomerComponent,
     CustomerDetailsComponent,
     AddCustomerComponent,
+    CustomerClientComponent,
+    CustomerClientDetailsComponent,
 
   ],
   imports: [
@@ -63,7 +68,7 @@ import { PullClientService } from '../app/services/pull-userInfo/pull-client.ser
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDialogModule
+    MatTooltipModule
   ],
   exports: [
 

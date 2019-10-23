@@ -1,14 +1,14 @@
+.navbar {
+    /* background-color: #676b74; */
+    background: linear-gradient(120deg, #59B509, #2B5505 95%);
+}
+
 .update {
     font-size: 24px;
     padding: .3em;
     color: black !important;
     
     
-}
-
-.navbar {
-    /* background-color: #676b74; */
-    background: linear-gradient(120deg, #0990b5, #066b87 95%);
 }
 
 h3 {

@@ -15,8 +15,10 @@ import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { RegisterRecruiterComponent } from './register-recruiter/register-recruiter.component';
 //import { MessageComponent } from './message/message.component';
 import { CustomerComponent } from './customer/customer.component';
+import {CustomerClientComponent} from './customer-client/customer-client.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
+import { CustomerClientDetailsComponent } from './customer-client-details/customer-client-details.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent, canActivate: [AuthGuard] }, 
@@ -35,12 +37,14 @@ const routes: Routes = [
   {path: 'jobs', component: JobsComponent},
 
   {path: 'customers', component: CustomerComponent},
+  {path: 'customers-client', component: CustomerClientComponent},
   {path: 'customer/add', 
     component: AddCustomerComponent 
   },
   {path: 'customers/:id', 
     component: CustomerDetailsComponent 
   },
+  { path: 'customers-client/:id', component: CustomerClientDetailsComponent}
 //   {path: '', 
 //     redirectTo: 'customers', 
 //     pathMatch: 'full'

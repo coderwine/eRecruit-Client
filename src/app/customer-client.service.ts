@@ -10,8 +10,8 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class CustomerService {
-  private customersUrl = 'https://erecruit-server.herokuapp.com/logs'; 
+export class CustomerClientService {
+  private customersUrl = 'https://erecruit-server.herokuapp.com/client-logs'; 
   constructor( 
     private http: HttpClient
   ) { }

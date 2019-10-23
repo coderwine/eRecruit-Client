@@ -1,0 +1,107 @@
+<header>
+        
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <div class="container">
+                <a class="navbar-brand" href="/clientPage">eRecruit</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+            </div>
+        </nav>
+    
+    </header>
+    
+    
+    
+    
+    <h4><span class="badge badge-light ">Client {{customer.id}}</span></h4>
+    <div [hidden]="submitted">
+        <form (ngSubmit)="update()" #detailCustomerForm="ngForm">
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" required
+            [(ngModel)]="customer.description" name="description" #description="ngModel">
+            <div [hidden]="description.valid || description.pristine"
+                 class="alert alert-danger">
+                Description is required
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" required
+            [(ngModel)]="customer.location" name="location" #location="ngModel">
+            <div [hidden]="location.valid || location.pristine"
+                 class="alert alert-danger">
+                Location is required
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="text" class="form-control" id="skills" required
+            [(ngModel)]="customer.skills" name="skills" #skills="ngModel">
+            <div [hidden]="skills.valid || skills.pristine"
+                 class="alert alert-danger">
+                Skills is required
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="linkedInURL">LinkedIn URL</label>
+            <input type="text" class="form-control" id="linkedInURL" required
+            [(ngModel)]="customer.linkedInURL" name="linkedInURL" #linkedInURL="ngModel">
+            <div [hidden]="linkedInURL.valid || linkedInURL.pristine"
+                 class="alert alert-danger">
+                LinkedIn URL is required
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="gitHubURL">Github URL</label>
+            <input type="text" class="form-control" id="gitHubURL" required
+            [(ngModel)]="customer.gitHubURL" name="gitHubURL" #gitHubURL="ngModel">
+            <div [hidden]="gitHubURL.valid || gitHubURL.pristine"
+                 class="alert alert-danger">
+                Github URL is required
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="portfolioURL">Portfolio URL</label>
+            <input type="text" class="form-control" id="portfolioURL" required
+            [(ngModel)]="customer.portfolioURL" name="portfolioURL" #portfolioURL="ngModel">
+            <div [hidden]="portfolioURL.valid || portfolioURL.pristine"
+                 class="alert alert-danger">
+                Portfolio URL is required
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label for="message">Message</label>
+            <input type="text" class="form-control" id="message" required
+            [(ngModel)]="customer.message" name="message" #message="ngModel">
+            <div [hidden]="message.valid || message.pristine"
+                 class="alert alert-danger">
+                Message is required
+            </div>
+          </div>
+     
+          <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+            <button type="submit" class="btn btn-dark" (click)="update()" [disabled]="!detailCustomerForm.form.valid">Update</button>
+            <!-- <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> -->
+          </div>
+        </form>
+    </div>
+     
+    <div [hidden]="!submitted">
+        <p>Updated!</p>
+        <div class="btn-group btn-group-sm">
+          <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+        </div>
+    </div>
+    
