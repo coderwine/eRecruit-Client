@@ -1,0 +1,53 @@
+h4 {
+    color: whitesmoke;
+}
+.reviews{
+    background-color: black;
+    border: 2pt solid black;
+    color: whitesmoke;
+}
+
+a.list-group-item:hover {
+    background-color:  #2B5505 !important;
+    color: white;
+}
+
+.tables {
+    height: 80vh;
+    border: 2pt solid black;
+    padding-top: 1em;
+    color: white;
+    background-color: #59B509;
+    overflow: auto;
+}
+
+
+/* TABLE BUILDS */
+.userBtn {
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+}
+
+.userBtn:hover {
+    color: #0990b5;
+}
+
+table {
+    width: 100%;    
+}
+
+table th {
+    font-size: 2em;
+    border-bottom: 2pt solid black;
+}
+
+table td {
+    padding: 1em 0;
+    font-size: 1em;
+}
+
+.infoDisplayed:hover {
+    background-color: #2B5505;
+    color: whitesmoke;
+}
