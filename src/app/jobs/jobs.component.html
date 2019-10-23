@@ -9,13 +9,13 @@
     </div>
 </nav>
 
-<div *ngIf="searchJobs">
+<div class="listJobs" *ngIf="searchJobs">
     <ol class="search-results">
-        <li *ngFor="let job of searchJobs.listings.listing">
+        <li class="jobSelect" *ngFor="let job of searchJobs.listings.listing">
                 <strong>{{job.title}}</strong> at
-            {{job.company.name}}
+            <u>{{job.company.name}}</u>
             <br />
-            <a href="{{job.url}}">{{job.url}}</a>
+            <a href="{{job.url}}" target="_blank">{{job.url}}</a>
         </li>
     </ol>
 
