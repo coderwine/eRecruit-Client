@@ -53,7 +53,11 @@ export class LoginAdminComponent implements OnInit {
     .subscribe(
       data => {
         console.log('ADMIN-Man!')
+<<<<<<< HEAD
         this.router.navigate(['/adminPortal']); //! THIS NEEDS TO ROUTE TO RECRUITER SPLASH
+=======
+        this.router.navigate(['/adminPortal']);
+>>>>>>> 99db08411c378beacdc7da89b6e5ddc6a2db0e5b
       },
       error => {
         this.alertService.error(error); 
@@ -62,4 +66,3 @@ export class LoginAdminComponent implements OnInit {
   }
 }
 
-//! Make sure that all endpoints go to each req table.

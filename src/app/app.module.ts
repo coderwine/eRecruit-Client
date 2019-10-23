@@ -5,7 +5,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'; 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'; 
 import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor } from './guards/jwt.interceptor'; 
 import { ErrorInterceptor } from './guards/error.interceptor'; 
@@ -18,6 +18,10 @@ import { ClientComponent } from './client/client.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FullComponent } from './full/full.component';
+
+// import { MatTableModule } from '@angular/material/table';
+// import { MatPaginatorModule, MatSortModule, MatTableModule } from '@angular/material';
+// import { MessageComponent } from './message/message.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { JobsComponent } from './jobs/jobs.component';
 import { FullMessageComponent } from './fullmessage/fullmessage.component';
@@ -48,6 +52,7 @@ import { CustomerClientDetailsComponent } from './customer-client-details/custom
     LoginRecruiterComponent,
     LoginAdminComponent,
     RegisterRecruiterComponent,
+    // MessageComponent
     CustomerComponent,
     CustomerDetailsComponent,
     AddCustomerComponent,
@@ -62,6 +67,9 @@ import { CustomerClientDetailsComponent } from './customer-client-details/custom
     ReactiveFormsModule,
     HttpClientModule,
     MatTooltipModule
+  ],
+  exports: [
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}, 

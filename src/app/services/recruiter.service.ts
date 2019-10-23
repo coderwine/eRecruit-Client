@@ -20,8 +20,6 @@ export class RecruiterService {
 
     constructor(private httpClient: HttpClient) {}
 
-    
-
     postUsersSignup() {
         return this.httpClient.post(`${this.Server_URL}/users/signup`, null)
     }
